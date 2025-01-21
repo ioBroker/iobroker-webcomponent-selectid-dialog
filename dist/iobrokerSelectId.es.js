@@ -53409,6 +53409,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }), Hd;
   }
   class wBe extends k.Component {
+    closeCalled = !1;
     constructor(e) {
       super(e);
       const r = lP(e.theme || "light");
@@ -53424,7 +53425,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     iobOnPropertyChanged = (e, r) => {
       if (console.log(`New value ${e}, ${r}`), e === "open") {
         const n = r === !0 || r === "true";
-        n !== this.state.opened && this.setState({ opened: n });
+        n !== this.state.opened && (n && (this.closeCalled = !1), this.setState({ opened: n }));
       } else e === "selected" && r !== this.state.selected ? this.setState({ selected: r }) : e === "all" && r !== this.state.all && this.setState({ all: r });
     };
     componentDidMount() {
@@ -53456,13 +53457,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           selected: this.state.selected,
           socket: this.state.socket,
           onClose: () => {
-            if (typeof this.props.onclose == "string" && typeof window[this.props.onclose] == "function") {
-              window[this.props.onclose](null);
-              return;
+            if (!this.closeCalled) {
+              if (typeof this.props.onclose == "string" && typeof window[this.props.onclose] == "function") {
+                window[this.props.onclose](null);
+                return;
+              }
+              return this.props.onclose(null);
             }
-            return this.props.onclose(null);
           },
           onOk: async (e) => {
+            this.closeCalled = !0;
             let r;
             if (e && typeof e == "object" ? r = e[0] : r = e, r) {
               const n = await this.state.socket?.getObject(r);

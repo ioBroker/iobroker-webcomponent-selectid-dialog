@@ -23,17 +23,15 @@ Therefore, you must ensure that the correct client library is loaded.
 
 How to use with Dynamic creation:
 ```js
-function openSelectIdDialog(selected, cb) {
-    window._iobOnSelected = function (newId, newObj, oldId, oldObj) {
-        if (newId === null) {
-            let selectDialog = document.getElementById('iob-select-id');
-            if (selectDialog) {
-                selectDialog.setAttribute('open', 'false');
-            }
-        } else {
-            console.log('Selected ' + newId);
-            cb && cb(newId);
+function openSelectIdDialog(selected, cb, allowAll) {
+    window._iobOnSelected = function (newId/*, newObj, oldId, oldObj */) {
+        let selectDialog = document.getElementById('iob-select-id');
+        if (selectDialog) {
+            selectDialog.setAttribute('open', 'false');
         }
+
+        console.log('Selected ' + newId);
+        cb && cb(newId);
     };
 
     if (!window._iobSelectDialog) {
@@ -48,13 +46,16 @@ function openSelectIdDialog(selected, cb) {
         window._iobSelectDialog.setAttribute('language', 'en');
         // This is a name of a global function
         window._iobSelectDialog.setAttribute('onclose', '_iobOnSelected');
-        window._iobSelectDialog.setAttribute('all', 'true');
-        window._iobSelectDialog.setAttribute('selected', selected);
+        window._iobSelectDialog.setAttribute('primary', '#AD1625');
+        window._iobSelectDialog.setAttribute('secondary', 'rgb(228, 145, 145)');
+        window._iobSelectDialog.setAttribute('paper', 'rgb(243, 243, 243)');
+        window._iobSelectDialog.setAttribute('all', allowAll ? 'true' : 'false');
+        window._iobSelectDialog.setAttribute('selected', selected || '');
         window._iobSelectDialog.setAttribute('open', 'true');
         document.body.appendChild(window._iobSelectDialog);
     } else {
         window._iobSelectDialog.setAttribute('all', allowAll ? 'true' : 'false');
-        window._iobSelectDialog.setAttribute('selected', $('#node-input-topic').val());
+        window._iobSelectDialog.setAttribute('selected', selected || '');
         window._iobSelectDialog.setAttribute('open', 'true');
     }
 }
@@ -77,10 +78,30 @@ Or static:
 ></iobroker-select-id>
 ```
 
+There is also a wrapper included in the file `selectIdHelper.js`, wich lazy loads the ESM module
+and provides a promise to open the UI:
+```js
+  import openSelectIdDialog from '@iobroker/webcomponent-selectid-dialog/dist/selectIdHelper.js'
+  const id = await openSelectIdDialog({
+      port: 8089,
+      host: '1.2.3.4',
+      protocol: 'http:',
+      language: 'en',
+      allowAll: true,
+      selected: '',
+      primary: '#AD1625',
+      secondary: 'rgb(228, 145, 145)',
+      paper: 'rgb(243, 243, 243)'
+  });
+```
+
 ## Changelog
 <!--
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (@jogibear9988) Added lazy loader
+
 ### 1.0.2 (2025-01-21)
 - (@GermanBluefox) Initial commit
 

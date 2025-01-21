@@ -122,6 +122,8 @@ interface SelectIDWebComponentState {
 }
 
 export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, SelectIDWebComponentState> {
+    private closeCalled = false;
+
     constructor(props: ISelectIDWebComponentProps) {
         super(props);
 
@@ -153,6 +155,9 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
         if (attr === 'open') {
             const _opened = value === true || value === 'true';
             if (_opened !== this.state.opened) {
+                if (_opened) {
+                    this.closeCalled = false;
+                }
                 this.setState({ opened: _opened });
             }
         } else if (attr === 'selected' && value !== this.state.selected) {
@@ -208,6 +213,9 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
                         selected={this.state.selected}
                         socket={this.state.socket}
                         onClose={(): void => {
+                            if (this.closeCalled) {
+                                return;
+                            }
                             if (
                                 typeof this.props.onclose === 'string' &&
                                 typeof (window as any)[this.props.onclose] === 'function'
@@ -219,6 +227,8 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
                             return (this.props.onclose as OnClose)(null);
                         }}
                         onOk={async (selected: string | string[] | undefined): Promise<void> => {
+                            this.closeCalled = true;
+
                             let id: string | undefined;
                             if (selected && typeof selected === 'object') {
                                 id = selected[0];
