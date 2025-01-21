@@ -99,7 +99,7 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.0.3 (2025-01-21)
 - (@jogibear9988) Added lazy loader
 
 ### 1.0.2 (2025-01-21)
