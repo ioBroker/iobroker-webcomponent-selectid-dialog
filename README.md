@@ -81,7 +81,7 @@ Or static:
 <!--
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.0.2 (2025-01-21)
 - (@GermanBluefox) Initial commit
 
 ## License
