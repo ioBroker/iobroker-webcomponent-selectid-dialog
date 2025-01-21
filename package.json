@@ -17,8 +17,10 @@
         "release-major": "release-script major --yes"
     },
     "files": [
-        "LICE"
+        "LICENSE",
+        "dist"
     ],
+    "main": "dist/iobrokerSelectId.umd.js",
     "devDependencies": {
         "@eslint/js": "^9.18.0",
         "@iobroker/adapter-react-v5": "^7.4.14",
