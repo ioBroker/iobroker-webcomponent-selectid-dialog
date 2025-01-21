@@ -8,7 +8,7 @@
     "scripts": {
         "dev": "vite",
         "tsc": "tsc -b --verbose",
-        "build": "tsc -b && vite build",
+        "build": "node tasks && tsc -b && vite build",
         "lint": "eslint -c eslint.config.mjs",
         "update-packages":  "npx -y npm-check-updates --upgrade",
         "release": "release-script",
