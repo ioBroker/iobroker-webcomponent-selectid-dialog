@@ -1,8 +1,13 @@
 # Web component to select objects from ioBroker (admin or web)
+This web component enables the implementation of the Select-ID Dialog for an ioBroker instance.
+It can operate with admin or web instances without requiring authentication. If admin/web has authentication enabled, there is no solution for that yet.
+It can work with admin or web instances only without authentication currently.
 
-Before dialog creation, the socket file must be loaded. You can find the code [here](https://github.com/ioBroker/ioBroker.ws.client/tree/main/dist/esm).
+Please note that mixed connections from an HTTP page to a WSS server and vice versa (from HTTPS to WS) do not work in most browsers.
 
-But it is always better to load the client part from the ioBroker server.
+Before creating the dialog, the socket file must be loaded. You can find the code [here](https://github.com/ioBroker/ioBroker.ws.client/tree/main/dist/esm).
+
+However, it is always better to load the client part from the ioBroker server.
 ```html
 <script src="http://iobrokerIP:8081/lib/js/socket.io.js"></script>
 <!-- or for web server -->
@@ -18,14 +23,17 @@ Therefore, you must ensure that the correct client library is loaded.
 
 How to use with Dynamic creation:
 ```js
-function openSelectIdIdalog(selected) {
+function openSelectIdDialog(selected, cb) {
     window._iobOnSelected = function (newId, newObj, oldId, oldObj) {
-        let selectDialog = document.getElementById('iob-select-id');
-        if (selectDialog) {
-            selectDialog.setAttribute('open', 'false');
+        if (newId === null) {
+            let selectDialog = document.getElementById('iob-select-id');
+            if (selectDialog) {
+                selectDialog.setAttribute('open', 'false');
+            }
+        } else {
+            console.log('Selected ' + newId);
+            cb && cb(newId);
         }
-
-        console.log('Selected ' + newId);
     };
 
     if (!window._iobSelectDialog) {
@@ -50,7 +58,9 @@ function openSelectIdIdalog(selected) {
         window._iobSelectDialog.setAttribute('open', 'true');
     }
 }
-openSelectIdIdalog();
+openSelectIdDialog('', id => {
+    
+});
 ```
 
 Or static:
