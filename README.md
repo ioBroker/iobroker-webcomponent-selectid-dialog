@@ -99,7 +99,7 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.0.4 (2025-03-23)
 - (@GermanBluefox) Updated packages
 
 ### 1.0.3 (2025-01-21)
