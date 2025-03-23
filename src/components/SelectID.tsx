@@ -99,7 +99,7 @@ function singletonConnection(props: ConnectionProps, onConnectionChanged: (conne
 
 export interface ISelectIDWebComponentProps {
     port?: number | string;
-    protocol?: 'http:' | 'https';
+    protocol?: 'http:' | 'https:';
     host?: string;
     selected?: string;
     onclose: OnClose | string;
