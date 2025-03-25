@@ -173,23 +173,34 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
         } else if (attr === 'all' && value !== this.state.all) {
             this.setState({ all: value as 'true' | 'false' });
         } else if (attr === 'token' && value !== JSON.stringify(this.state.token)) {
-            const token = value ? (JSON.parse(value as string) as OAuth2Response) : null;
-            const oldToken = this.state.token;
-            this.setState({ token: (value as string) || '' }, () => {
-                if (token) {
-                    Connection.saveTokensStatic(token, false);
-                } else if (oldToken) {
-                    Connection.deleteTokensStatic();
+            this.setState({ token: (value as string) || '', connected: false }, () => {
+                let access_token: string = '';
+                if (this.state.token) {
+                    const token: OAuth2Response = JSON.parse(this.state.token);
+                    access_token = token.access_token;
                 }
+                this.setState({
+                    socket: singletonConnection(
+                        {
+                            port: this.props.port,
+                            host: this.props.host,
+                            protocol: this.props.protocol,
+                            // @ts-expect-error
+                            token: access_token,
+                        },
+                        (connected: boolean): void => this.setState({ connected }),
+                    ),
+                });
             });
         }
     };
 
     componentDidMount(): void {
         (window as any)._iobOnPropertyChanged = this.iobOnPropertyChanged;
-        if (this.props.token) {
-            const token: OAuth2Response = JSON.parse(this.props.token);
-            Connection.saveTokensStatic(token, false);
+        let access_token: string = '';
+        if (this.state.token) {
+            const token: OAuth2Response = JSON.parse(this.state.token);
+            access_token = token.access_token;
         }
 
         this.setState({
@@ -198,6 +209,8 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
                     port: this.props.port,
                     host: this.props.host,
                     protocol: this.props.protocol,
+                    // @ts-expect-error
+                    token: access_token,
                 },
                 (connected: boolean): void => this.setState({ connected }),
             ),
