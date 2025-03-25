@@ -2,7 +2,7 @@ let selectDialog = null;
 let storedResolve = null;
 /**
  *
- * @param {{host:string, port: number, protocol: 'http:' | 'https:', language: string, selected?: string, allowAll?: boolean, primary?: string; secondary?: string, paper?: string}} config
+ * @param {{host:string, port: number, protocol: 'http:' | 'https:', language: string, selected?: string, allowAll?: boolean, primary?: string; secondary?: string, paper?: string, token?: string}} config
  * @returns {Promise<string?>}
  */
 export async function openSelectIdDialog(config) {
@@ -26,11 +26,13 @@ export async function openSelectIdDialog(config) {
             selectDialog.setAttribute('paper', 'rgb(243, 243, 243)');
             selectDialog.setAttribute('all', config.allowAll ? 'true' : 'false');
             selectDialog.setAttribute('selected', config.selected);
+            selectDialog.setAttribute('token', config.token);
             selectDialog.setAttribute('open', 'true');
             document.body.appendChild(selectDialog);
         } else {
             selectDialog.setAttribute('all', config.allowAll ? 'true' : 'false');
             selectDialog.setAttribute('selected', config.selected);
+            selectDialog.setAttribute('token', config.token);
             selectDialog.setAttribute('open', 'true');
         }
     });

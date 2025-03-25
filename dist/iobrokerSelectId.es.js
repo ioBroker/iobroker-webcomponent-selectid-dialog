@@ -1086,17 +1086,17 @@ var lWe = pA((bn, wn) => {
         this.onError(pe);
       }
     }
-    var Or = !1, $n = null, lo = !1, Ba = null, bl = { onError: function(a) {
-      Or = !0, $n = a;
+    var Dr = !1, $n = null, lo = !1, Ba = null, bl = { onError: function(a) {
+      Dr = !0, $n = a;
     } };
     function bM(a, l, p, g, v, x, M, F, B) {
-      Or = !1, $n = null, Kt.apply(bl, arguments);
+      Dr = !1, $n = null, Kt.apply(bl, arguments);
     }
     function wM(a, l, p, g, v, x, M, F, B) {
-      if (bM.apply(this, arguments), Or) {
-        if (Or) {
+      if (bM.apply(this, arguments), Dr) {
+        if (Dr) {
           var ee = $n;
-          Or = !1, $n = null;
+          Dr = !1, $n = null;
         } else throw Error(r(198));
         lo || (lo = !0, Ba = ee);
       }
@@ -2289,7 +2289,7 @@ var lWe = pA((bn, wn) => {
     function jt(a, l) {
       Ya++, Kh[Ya] = a.current, a.current = l;
     }
-    var hs = {}, Dr = ps(hs), Xr = ps(!1), Js = hs;
+    var hs = {}, Mr = ps(hs), Xr = ps(!1), Js = hs;
     function Ka(a, l) {
       var p = a.type.contextTypes;
       if (!p) return hs;
@@ -2303,11 +2303,11 @@ var lWe = pA((bn, wn) => {
       return a = a.childContextTypes, a != null;
     }
     function zu() {
-      zt(Xr), zt(Dr);
+      zt(Xr), zt(Mr);
     }
     function Pw(a, l, p) {
-      if (Dr.current !== hs) throw Error(r(168));
-      jt(Dr, l), jt(Xr, p);
+      if (Mr.current !== hs) throw Error(r(168));
+      jt(Mr, l), jt(Xr, p);
     }
     function jw(a, l, p) {
       var g = a.stateNode;
@@ -2317,12 +2317,12 @@ var lWe = pA((bn, wn) => {
       return te({}, p, g);
     }
     function Fu(a) {
-      return a = (a = a.stateNode) && a.__reactInternalMemoizedMergedChildContext || hs, Js = Dr.current, jt(Dr, a), jt(Xr, Xr.current), !0;
+      return a = (a = a.stateNode) && a.__reactInternalMemoizedMergedChildContext || hs, Js = Mr.current, jt(Mr, a), jt(Xr, Xr.current), !0;
     }
     function Rw(a, l, p) {
       var g = a.stateNode;
       if (!g) throw Error(r(169));
-      p ? (a = jw(a, l, Js), g.__reactInternalMemoizedMergedChildContext = a, zt(Xr), zt(Dr), jt(Dr, a)) : zt(Xr), jt(Xr, p);
+      p ? (a = jw(a, l, Js), g.__reactInternalMemoizedMergedChildContext = a, zt(Xr), zt(Mr), jt(Mr, a)) : zt(Xr), jt(Xr, p);
     }
     var Ro = null, Lu = !1, Zh = !1;
     function Iw(a) {
@@ -2878,7 +2878,7 @@ var lWe = pA((bn, wn) => {
       hf.length = 0;
     }
     var Yu = O.ReactCurrentDispatcher, mf = O.ReactCurrentBatchConfig, ea = 0, Jt = null, pr = null, yr = null, Ku = !1, Vl = !1, Ul = 0, AN = 0;
-    function Mr() {
+    function Nr() {
       throw Error(r(321));
     }
     function _f(a, l) {
@@ -3096,7 +3096,7 @@ var lWe = pA((bn, wn) => {
       var g = bs(a);
       if (p = { lane: g, action: p, hasEagerState: !1, eagerState: null, next: null }, m1(a)) _1(l, p);
       else if (p = qw(a, l, p, g), p !== null) {
-        var v = Fr();
+        var v = Lr();
         Jn(p, a, g, v), g1(p, l, g);
       }
     }
@@ -3115,7 +3115,7 @@ var lWe = pA((bn, wn) => {
         } catch {
         } finally {
         }
-        p = qw(a, l, v, g), p !== null && (v = Fr(), Jn(p, a, g, v), g1(p, l, g));
+        p = qw(a, l, v, g), p !== null && (v = Lr(), Jn(p, a, g, v), g1(p, l, g));
       }
     }
     function m1(a) {
@@ -3133,7 +3133,7 @@ var lWe = pA((bn, wn) => {
         g &= a.pendingLanes, p |= g, l.lanes = p, Sh(a, p);
       }
     }
-    var ed = { readContext: Dn, useCallback: Mr, useContext: Mr, useEffect: Mr, useImperativeHandle: Mr, useInsertionEffect: Mr, useLayoutEffect: Mr, useMemo: Mr, useReducer: Mr, useRef: Mr, useState: Mr, useDebugValue: Mr, useDeferredValue: Mr, useTransition: Mr, useMutableSource: Mr, useSyncExternalStore: Mr, useId: Mr, unstable_isNewReconciler: !1 }, IN = { readContext: Dn, useCallback: function(a, l) {
+    var ed = { readContext: Dn, useCallback: Nr, useContext: Nr, useEffect: Nr, useImperativeHandle: Nr, useInsertionEffect: Nr, useLayoutEffect: Nr, useMemo: Nr, useReducer: Nr, useRef: Nr, useState: Nr, useDebugValue: Nr, useDeferredValue: Nr, useTransition: Nr, useMutableSource: Nr, useSyncExternalStore: Nr, useId: Nr, unstable_isNewReconciler: !1 }, IN = { readContext: Dn, useCallback: function(a, l) {
       return ho().memoizedState = [a, l === void 0 ? null : l], a;
     }, useContext: Dn, useEffect: a1, useImperativeHandle: function(a, l, p) {
       return p = p != null ? p.concat([a]) : null, Zu(
@@ -3236,15 +3236,15 @@ var lWe = pA((bn, wn) => {
       return (a = a._reactInternals) ? Xs(a) === a : !1;
     }, enqueueSetState: function(a, l, p) {
       a = a._reactInternals;
-      var g = Fr(), v = bs(a), x = Lo(g, v);
+      var g = Lr(), v = bs(a), x = Lo(g, v);
       x.payload = l, p != null && (x.callback = p), l = _s(a, x, v), l !== null && (Jn(l, a, v, g), Xu(l, a, v));
     }, enqueueReplaceState: function(a, l, p) {
       a = a._reactInternals;
-      var g = Fr(), v = bs(a), x = Lo(g, v);
+      var g = Lr(), v = bs(a), x = Lo(g, v);
       x.tag = 1, x.payload = l, p != null && (x.callback = p), l = _s(a, x, v), l !== null && (Jn(l, a, v, g), Xu(l, a, v));
     }, enqueueForceUpdate: function(a, l) {
       a = a._reactInternals;
-      var p = Fr(), g = bs(a), v = Lo(p, g);
+      var p = Lr(), g = bs(a), v = Lo(p, g);
       v.tag = 2, l != null && (v.callback = l), l = _s(a, v, g), l !== null && (Jn(l, a, g, p), Xu(l, a, g));
     } };
     function y1(a, l, p, g, v, x, M) {
@@ -3252,7 +3252,7 @@ var lWe = pA((bn, wn) => {
     }
     function v1(a, l, p) {
       var g = !1, v = hs, x = l.contextType;
-      return typeof x == "object" && x !== null ? x = Dn(x) : (v = Gr(l) ? Js : Dr.current, g = l.contextTypes, x = (g = g != null) ? Ka(a, v) : hs), l = new l(p, x), a.memoizedState = l.state !== null && l.state !== void 0 ? l.state : null, l.updater = td, a.stateNode = l, l._reactInternals = a, g && (a = a.stateNode, a.__reactInternalMemoizedUnmaskedChildContext = v, a.__reactInternalMemoizedMaskedChildContext = x), l;
+      return typeof x == "object" && x !== null ? x = Dn(x) : (v = Gr(l) ? Js : Mr.current, g = l.contextTypes, x = (g = g != null) ? Ka(a, v) : hs), l = new l(p, x), a.memoizedState = l.state !== null && l.state !== void 0 ? l.state : null, l.updater = td, a.stateNode = l, l._reactInternals = a, g && (a = a.stateNode, a.__reactInternalMemoizedUnmaskedChildContext = v, a.__reactInternalMemoizedMaskedChildContext = x), l;
     }
     function b1(a, l, p, g) {
       a = l.state, typeof l.componentWillReceiveProps == "function" && l.componentWillReceiveProps(p, g), typeof l.UNSAFE_componentWillReceiveProps == "function" && l.UNSAFE_componentWillReceiveProps(p, g), l.state !== a && td.enqueueReplaceState(l, l.state, null);
@@ -3261,7 +3261,7 @@ var lWe = pA((bn, wn) => {
       var v = a.stateNode;
       v.props = p, v.state = a.memoizedState, v.refs = {}, uf(a);
       var x = l.contextType;
-      typeof x == "object" && x !== null ? v.context = Dn(x) : (x = Gr(l) ? Js : Dr.current, v.context = Ka(a, x)), v.state = a.memoizedState, x = l.getDerivedStateFromProps, typeof x == "function" && (Sf(a, l, x, p), v.state = a.memoizedState), typeof l.getDerivedStateFromProps == "function" || typeof v.getSnapshotBeforeUpdate == "function" || typeof v.UNSAFE_componentWillMount != "function" && typeof v.componentWillMount != "function" || (l = v.state, typeof v.componentWillMount == "function" && v.componentWillMount(), typeof v.UNSAFE_componentWillMount == "function" && v.UNSAFE_componentWillMount(), l !== v.state && td.enqueueReplaceState(v, v.state, null), Gu(a, p, v, g), v.state = a.memoizedState), typeof v.componentDidMount == "function" && (a.flags |= 4194308);
+      typeof x == "object" && x !== null ? v.context = Dn(x) : (x = Gr(l) ? Js : Mr.current, v.context = Ka(a, x)), v.state = a.memoizedState, x = l.getDerivedStateFromProps, typeof x == "function" && (Sf(a, l, x, p), v.state = a.memoizedState), typeof l.getDerivedStateFromProps == "function" || typeof v.getSnapshotBeforeUpdate == "function" || typeof v.UNSAFE_componentWillMount != "function" && typeof v.componentWillMount != "function" || (l = v.state, typeof v.componentWillMount == "function" && v.componentWillMount(), typeof v.UNSAFE_componentWillMount == "function" && v.UNSAFE_componentWillMount(), l !== v.state && td.enqueueReplaceState(v, v.state, null), Gu(a, p, v, g), v.state = a.memoizedState), typeof v.componentDidMount == "function" && (a.flags |= 4194308);
     }
     function si(a, l) {
       try {
@@ -3336,13 +3336,13 @@ Error generating stack: ` + x.message + `
       return (a.mode & 1) === 0 ? (a === l ? a.flags |= 65536 : (a.flags |= 128, p.flags |= 131072, p.flags &= -52805, p.tag === 1 && (p.alternate === null ? p.tag = 17 : (l = Lo(-1, 1), l.tag = 2, _s(p, l, 1))), p.lanes |= 1), a) : (a.flags |= 65536, a.lanes = v, a);
     }
     var BN = O.ReactCurrentOwner, Jr = !1;
-    function zr(a, l, p, g) {
+    function Fr(a, l, p, g) {
       l.child = a === null ? Uw(l, null, p, g) : ti(l, a.child, p, g);
     }
     function E1(a, l, p, g, v) {
       p = p.render;
       var x = l.ref;
-      return ni(l, v), g = gf(a, l, p, g, x, v), p = yf(), a !== null && !Jr ? (l.updateQueue = a.updateQueue, l.flags &= -2053, a.lanes &= ~v, Bo(a, l, v)) : (Wt && p && Qh(l), l.flags |= 1, zr(a, l, g, v), l.child);
+      return ni(l, v), g = gf(a, l, p, g, x, v), p = yf(), a !== null && !Jr ? (l.updateQueue = a.updateQueue, l.flags &= -2053, a.lanes &= ~v, Bo(a, l, v)) : (Wt && p && Qh(l), l.flags |= 1, Fr(a, l, g, v), l.child);
     }
     function $1(a, l, p, g, v) {
       if (a === null) {
@@ -3371,15 +3371,15 @@ Error generating stack: ` + x.message + `
         l.memoizedState = { baseLanes: 0, cachePool: null, transitions: null }, g = x !== null ? x.baseLanes : p, jt(ii, mn), mn |= g;
       }
       else x !== null ? (g = x.baseLanes | p, l.memoizedState = null) : g = p, jt(ii, mn), mn |= g;
-      return zr(a, l, v, p), l.child;
+      return Fr(a, l, v, p), l.child;
     }
     function D1(a, l) {
       var p = l.ref;
       (a === null && p !== null || a !== null && a.ref !== p) && (l.flags |= 512, l.flags |= 2097152);
     }
     function $f(a, l, p, g, v) {
-      var x = Gr(p) ? Js : Dr.current;
-      return x = Ka(l, x), ni(l, v), p = gf(a, l, p, g, x, v), g = yf(), a !== null && !Jr ? (l.updateQueue = a.updateQueue, l.flags &= -2053, a.lanes &= ~v, Bo(a, l, v)) : (Wt && g && Qh(l), l.flags |= 1, zr(a, l, p, v), l.child);
+      var x = Gr(p) ? Js : Mr.current;
+      return x = Ka(l, x), ni(l, v), p = gf(a, l, p, g, x, v), g = yf(), a !== null && !Jr ? (l.updateQueue = a.updateQueue, l.flags &= -2053, a.lanes &= ~v, Bo(a, l, v)) : (Wt && g && Qh(l), l.flags |= 1, Fr(a, l, p, v), l.child);
     }
     function M1(a, l, p, g, v) {
       if (Gr(p)) {
@@ -3391,13 +3391,13 @@ Error generating stack: ` + x.message + `
         var M = l.stateNode, F = l.memoizedProps;
         M.props = F;
         var B = M.context, ee = p.contextType;
-        typeof ee == "object" && ee !== null ? ee = Dn(ee) : (ee = Gr(p) ? Js : Dr.current, ee = Ka(l, ee));
+        typeof ee == "object" && ee !== null ? ee = Dn(ee) : (ee = Gr(p) ? Js : Mr.current, ee = Ka(l, ee));
         var pe = p.getDerivedStateFromProps, me = typeof pe == "function" || typeof M.getSnapshotBeforeUpdate == "function";
         me || typeof M.UNSAFE_componentWillReceiveProps != "function" && typeof M.componentWillReceiveProps != "function" || (F !== g || B !== ee) && b1(l, M, g, ee), ms = !1;
         var ce = l.memoizedState;
         M.state = ce, Gu(l, g, M, v), B = l.memoizedState, F !== g || ce !== B || Xr.current || ms ? (typeof pe == "function" && (Sf(l, p, pe, g), B = l.memoizedState), (F = ms || y1(l, p, F, g, ce, B, ee)) ? (me || typeof M.UNSAFE_componentWillMount != "function" && typeof M.componentWillMount != "function" || (typeof M.componentWillMount == "function" && M.componentWillMount(), typeof M.UNSAFE_componentWillMount == "function" && M.UNSAFE_componentWillMount()), typeof M.componentDidMount == "function" && (l.flags |= 4194308)) : (typeof M.componentDidMount == "function" && (l.flags |= 4194308), l.memoizedProps = g, l.memoizedState = B), M.props = g, M.state = B, M.context = ee, g = F) : (typeof M.componentDidMount == "function" && (l.flags |= 4194308), g = !1);
       } else {
-        M = l.stateNode, Xw(a, l), F = l.memoizedProps, ee = l.type === l.elementType ? F : qn(l.type, F), M.props = ee, me = l.pendingProps, ce = M.context, B = p.contextType, typeof B == "object" && B !== null ? B = Dn(B) : (B = Gr(p) ? Js : Dr.current, B = Ka(l, B));
+        M = l.stateNode, Xw(a, l), F = l.memoizedProps, ee = l.type === l.elementType ? F : qn(l.type, F), M.props = ee, me = l.pendingProps, ce = M.context, B = p.contextType, typeof B == "object" && B !== null ? B = Dn(B) : (B = Gr(p) ? Js : Mr.current, B = Ka(l, B));
         var $e = p.getDerivedStateFromProps;
         (pe = typeof $e == "function" || typeof M.getSnapshotBeforeUpdate == "function") || typeof M.UNSAFE_componentWillReceiveProps != "function" && typeof M.componentWillReceiveProps != "function" || (F !== me || ce !== B) && b1(l, M, g, B), ms = !1, ce = l.memoizedState, M.state = ce, Gu(l, g, M, v);
         var Pe = l.memoizedState;
@@ -3411,14 +3411,14 @@ Error generating stack: ` + x.message + `
       if (!g && !M) return v && Rw(l, p, !1), Bo(a, l, x);
       g = l.stateNode, BN.current = l;
       var F = M && typeof p.getDerivedStateFromError != "function" ? null : g.render();
-      return l.flags |= 1, a !== null && M ? (l.child = ti(l, a.child, null, x), l.child = ti(l, null, F, x)) : zr(a, l, F, x), l.memoizedState = g.state, v && Rw(l, p, !0), l.child;
+      return l.flags |= 1, a !== null && M ? (l.child = ti(l, a.child, null, x), l.child = ti(l, null, F, x)) : Fr(a, l, F, x), l.memoizedState = g.state, v && Rw(l, p, !0), l.child;
     }
     function N1(a) {
       var l = a.stateNode;
       l.pendingContext ? Pw(a, l.pendingContext, l.pendingContext !== l.context) : l.context && Pw(a, l.context, !1), df(a, l.containerInfo);
     }
     function A1(a, l, p, g, v) {
-      return ei(), nf(v), l.flags |= 256, zr(a, l, p, g), l.child;
+      return ei(), nf(v), l.flags |= 256, Fr(a, l, p, g), l.child;
     }
     var Of = { dehydrated: null, treeContext: null, retryLane: 0 };
     function Df(a) {
@@ -3505,7 +3505,7 @@ Error generating stack: ` + x.message + `
     }
     function R1(a, l, p) {
       var g = l.pendingProps, v = g.revealOrder, x = g.tail;
-      if (zr(a, l, g.children, p), g = Gt.current, (g & 2) !== 0) g = g & 1 | 2, l.flags |= 128;
+      if (Fr(a, l, g.children, p), g = Gt.current, (g & 2) !== 0) g = g & 1 | 2, l.flags |= 128;
       else {
         if (a !== null && (a.flags & 128) !== 0) e: for (a = l.child; a !== null; ) {
           if (a.tag === 13) a.memoizedState !== null && j1(a, p, l);
@@ -3667,7 +3667,7 @@ Error generating stack: ` + x.message + `
           g === null ? l || a.tail === null ? a.tail = null : a.tail.sibling = null : g.sibling = null;
       }
     }
-    function Nr(a) {
+    function Ar(a) {
       var l = a.alternate !== null && a.alternate.child === a.child, p = 0, g = 0;
       if (l) for (var v = a.child; v !== null; ) p |= v.lanes | v.childLanes, g |= v.subtreeFlags & 14680064, g |= v.flags & 14680064, v.return = a, v = v.sibling;
       else for (v = a.child; v !== null; ) p |= v.lanes | v.childLanes, g |= v.subtreeFlags, g |= v.flags, v.return = a, v = v.sibling;
@@ -3686,11 +3686,11 @@ Error generating stack: ` + x.message + `
         case 12:
         case 9:
         case 14:
-          return Nr(l), null;
+          return Ar(l), null;
         case 1:
-          return Gr(l.type) && zu(), Nr(l), null;
+          return Gr(l.type) && zu(), Ar(l), null;
         case 3:
-          return g = l.stateNode, oi(), zt(Xr), zt(Dr), ff(), g.pendingContext && (g.context = g.pendingContext, g.pendingContext = null), (a === null || a.child === null) && (Hu(l) ? l.flags |= 4 : a === null || a.memoizedState.isDehydrated && (l.flags & 256) === 0 || (l.flags |= 1024, Un !== null && (Vf(Un), Un = null))), Af(a, l), Nr(l), null;
+          return g = l.stateNode, oi(), zt(Xr), zt(Mr), ff(), g.pendingContext && (g.context = g.pendingContext, g.pendingContext = null), (a === null || a.child === null) && (Hu(l) ? l.flags |= 4 : a === null || a.memoizedState.isDehydrated && (l.flags & 256) === 0 || (l.flags |= 1024, Un !== null && (Vf(Un), Un = null))), Af(a, l), Ar(l), null;
         case 5:
           pf(l);
           var v = Qs(Hl.current);
@@ -3698,7 +3698,7 @@ Error generating stack: ` + x.message + `
           else {
             if (!g) {
               if (l.stateNode === null) throw Error(r(166));
-              return Nr(l), null;
+              return Ar(l), null;
             }
             if (a = Qs(po.current), Hu(l)) {
               g = l.stateNode, p = l.type;
@@ -3852,7 +3852,7 @@ Error generating stack: ` + x.message + `
             }
             l.ref !== null && (l.flags |= 512, l.flags |= 2097152);
           }
-          return Nr(l), null;
+          return Ar(l), null;
         case 6:
           if (a && l.stateNode != null) F1(a, l, a.memoizedProps, g);
           else {
@@ -3868,7 +3868,7 @@ Error generating stack: ` + x.message + `
               x && (l.flags |= 4);
             } else g = (p.nodeType === 9 ? p : p.ownerDocument).createTextNode(g), g[uo] = l, l.stateNode = g;
           }
-          return Nr(l), null;
+          return Ar(l), null;
         case 13:
           if (zt(Gt), g = l.memoizedState, a === null || a.memoizedState !== null && a.memoizedState.dehydrated !== null) {
             if (Wt && fn !== null && (l.mode & 1) !== 0 && (l.flags & 128) === 0) Ww(), ei(), l.flags |= 98560, x = !1;
@@ -3878,19 +3878,19 @@ Error generating stack: ` + x.message + `
                 if (x = l.memoizedState, x = x !== null ? x.dehydrated : null, !x) throw Error(r(317));
                 x[uo] = l;
               } else ei(), (l.flags & 128) === 0 && (l.memoizedState = null), l.flags |= 4;
-              Nr(l), x = !1;
+              Ar(l), x = !1;
             } else Un !== null && (Vf(Un), Un = null), x = !0;
             if (!x) return l.flags & 65536 ? l : null;
           }
-          return (l.flags & 128) !== 0 ? (l.lanes = p, l) : (g = g !== null, g !== (a !== null && a.memoizedState !== null) && g && (l.child.flags |= 8192, (l.mode & 1) !== 0 && (a === null || (Gt.current & 1) !== 0 ? hr === 0 && (hr = 3) : Xf())), l.updateQueue !== null && (l.flags |= 4), Nr(l), null);
+          return (l.flags & 128) !== 0 ? (l.lanes = p, l) : (g = g !== null, g !== (a !== null && a.memoizedState !== null) && g && (l.child.flags |= 8192, (l.mode & 1) !== 0 && (a === null || (Gt.current & 1) !== 0 ? hr === 0 && (hr = 3) : Xf())), l.updateQueue !== null && (l.flags |= 4), Ar(l), null);
         case 4:
-          return oi(), Af(a, l), a === null && Rl(l.stateNode.containerInfo), Nr(l), null;
+          return oi(), Af(a, l), a === null && Rl(l.stateNode.containerInfo), Ar(l), null;
         case 10:
-          return af(l.type._context), Nr(l), null;
+          return af(l.type._context), Ar(l), null;
         case 17:
-          return Gr(l.type) && zu(), Nr(l), null;
+          return Gr(l.type) && zu(), Ar(l), null;
         case 19:
-          if (zt(Gt), x = l.memoizedState, x === null) return Nr(l), null;
+          if (zt(Gt), x = l.memoizedState, x === null) return Ar(l), null;
           if (g = (l.flags & 128) !== 0, M = x.rendering, M === null) if (g) Gl(x, !1);
           else {
             if (hr !== 0 || a !== null && (a.flags & 128) !== 0) for (a = l.child; a !== null; ) {
@@ -3904,14 +3904,14 @@ Error generating stack: ` + x.message + `
           }
           else {
             if (!g) if (a = Ju(M), a !== null) {
-              if (l.flags |= 128, g = !0, p = a.updateQueue, p !== null && (l.updateQueue = p, l.flags |= 4), Gl(x, !0), x.tail === null && x.tailMode === "hidden" && !M.alternate && !Wt) return Nr(l), null;
+              if (l.flags |= 128, g = !0, p = a.updateQueue, p !== null && (l.updateQueue = p, l.flags |= 4), Gl(x, !0), x.tail === null && x.tailMode === "hidden" && !M.alternate && !Wt) return Ar(l), null;
             } else 2 * nr() - x.renderingStartTime > li && p !== 1073741824 && (l.flags |= 128, g = !0, Gl(x, !1), l.lanes = 4194304);
             x.isBackwards ? (M.sibling = l.child, l.child = M) : (p = x.last, p !== null ? p.sibling = M : l.child = M, x.last = M);
           }
-          return x.tail !== null ? (l = x.tail, x.rendering = l, x.tail = l.sibling, x.renderingStartTime = nr(), l.sibling = null, p = Gt.current, jt(Gt, g ? p & 1 | 2 : p & 1), l) : (Nr(l), null);
+          return x.tail !== null ? (l = x.tail, x.rendering = l, x.tail = l.sibling, x.renderingStartTime = nr(), l.sibling = null, p = Gt.current, jt(Gt, g ? p & 1 | 2 : p & 1), l) : (Ar(l), null);
         case 22:
         case 23:
-          return qf(), g = l.memoizedState !== null, a !== null && a.memoizedState !== null !== g && (l.flags |= 8192), g && (l.mode & 1) !== 0 ? (mn & 1073741824) !== 0 && (Nr(l), l.subtreeFlags & 6 && (l.flags |= 8192)) : Nr(l), null;
+          return qf(), g = l.memoizedState !== null, a !== null && a.memoizedState !== null !== g && (l.flags |= 8192), g && (l.mode & 1) !== 0 ? (mn & 1073741824) !== 0 && (Ar(l), l.subtreeFlags & 6 && (l.flags |= 8192)) : Ar(l), null;
         case 24:
           return null;
         case 25:
@@ -3924,7 +3924,7 @@ Error generating stack: ` + x.message + `
         case 1:
           return Gr(l.type) && zu(), a = l.flags, a & 65536 ? (l.flags = a & -65537 | 128, l) : null;
         case 3:
-          return oi(), zt(Xr), zt(Dr), ff(), a = l.flags, (a & 65536) !== 0 && (a & 128) === 0 ? (l.flags = a & -65537 | 128, l) : null;
+          return oi(), zt(Xr), zt(Mr), ff(), a = l.flags, (a & 65536) !== 0 && (a & 128) === 0 ? (l.flags = a & -65537 | 128, l) : null;
         case 5:
           return pf(l), null;
         case 13:
@@ -3948,7 +3948,7 @@ Error generating stack: ` + x.message + `
           return null;
       }
     }
-    var od = !1, Ar = !1, qN = typeof WeakSet == "function" ? WeakSet : Set, Ne = null;
+    var od = !1, Pr = !1, qN = typeof WeakSet == "function" ? WeakSet : Set, Ne = null;
     function ai(a, l) {
       var p = a.ref;
       if (p !== null) if (typeof p == "function") try {
@@ -4106,7 +4106,7 @@ Error generating stack: ` + x.message + `
       if (g === 5 || g === 6) a = a.stateNode, l ? p.insertBefore(a, l) : p.appendChild(a);
       else if (g !== 4 && (a = a.child, a !== null)) for (If(a, l, p), a = a.sibling; a !== null; ) If(a, l, p), a = a.sibling;
     }
-    var xr = null, Xn = !1;
+    var Sr = null, Xn = !1;
     function gs(a, l, p) {
       for (p = p.child; p !== null; ) V1(a, l, p), p = p.sibling;
     }
@@ -4117,22 +4117,22 @@ Error generating stack: ` + x.message + `
       }
       switch (p.tag) {
         case 5:
-          Ar || ai(p, l);
+          Pr || ai(p, l);
         case 6:
-          var g = xr, v = Xn;
-          xr = null, gs(a, l, p), xr = g, Xn = v, xr !== null && (Xn ? (a = xr, p = p.stateNode, a.nodeType === 8 ? a.parentNode.removeChild(p) : a.removeChild(p)) : xr.removeChild(p.stateNode));
+          var g = Sr, v = Xn;
+          Sr = null, gs(a, l, p), Sr = g, Xn = v, Sr !== null && (Xn ? (a = Sr, p = p.stateNode, a.nodeType === 8 ? a.parentNode.removeChild(p) : a.removeChild(p)) : Sr.removeChild(p.stateNode));
           break;
         case 18:
-          xr !== null && (Xn ? (a = xr, p = p.stateNode, a.nodeType === 8 ? Jh(a.parentNode, p) : a.nodeType === 1 && Jh(a, p), $l(a)) : Jh(xr, p.stateNode));
+          Sr !== null && (Xn ? (a = Sr, p = p.stateNode, a.nodeType === 8 ? Jh(a.parentNode, p) : a.nodeType === 1 && Jh(a, p), $l(a)) : Jh(Sr, p.stateNode));
           break;
         case 4:
-          g = xr, v = Xn, xr = p.stateNode.containerInfo, Xn = !0, gs(a, l, p), xr = g, Xn = v;
+          g = Sr, v = Xn, Sr = p.stateNode.containerInfo, Xn = !0, gs(a, l, p), Sr = g, Xn = v;
           break;
         case 0:
         case 11:
         case 14:
         case 15:
-          if (!Ar && (g = p.updateQueue, g !== null && (g = g.lastEffect, g !== null))) {
+          if (!Pr && (g = p.updateQueue, g !== null && (g = g.lastEffect, g !== null))) {
             v = g = g.next;
             do {
               var x = v, M = x.destroy;
@@ -4142,7 +4142,7 @@ Error generating stack: ` + x.message + `
           gs(a, l, p);
           break;
         case 1:
-          if (!Ar && (ai(p, l), g = p.stateNode, typeof g.componentWillUnmount == "function")) try {
+          if (!Pr && (ai(p, l), g = p.stateNode, typeof g.componentWillUnmount == "function")) try {
             g.props = p.memoizedProps, g.state = p.memoizedState, g.componentWillUnmount();
           } catch (F) {
             Zt(p, l, F);
@@ -4153,7 +4153,7 @@ Error generating stack: ` + x.message + `
           gs(a, l, p);
           break;
         case 22:
-          p.mode & 1 ? (Ar = (g = Ar) || p.memoizedState !== null, gs(a, l, p), Ar = g) : gs(a, l, p);
+          p.mode & 1 ? (Pr = (g = Pr) || p.memoizedState !== null, gs(a, l, p), Pr = g) : gs(a, l, p);
           break;
         default:
           gs(a, l, p);
@@ -4179,19 +4179,19 @@ Error generating stack: ` + x.message + `
           e: for (; F !== null; ) {
             switch (F.tag) {
               case 5:
-                xr = F.stateNode, Xn = !1;
+                Sr = F.stateNode, Xn = !1;
                 break e;
               case 3:
-                xr = F.stateNode.containerInfo, Xn = !0;
+                Sr = F.stateNode.containerInfo, Xn = !0;
                 break e;
               case 4:
-                xr = F.stateNode.containerInfo, Xn = !0;
+                Sr = F.stateNode.containerInfo, Xn = !0;
                 break e;
             }
             F = F.return;
           }
-          if (xr === null) throw Error(r(160));
-          V1(x, M, v), xr = null, Xn = !1;
+          if (Sr === null) throw Error(r(160));
+          V1(x, M, v), Sr = null, Xn = !1;
           var B = v.alternate;
           B !== null && (B.return = null), v.return = null;
         } catch (ee) {
@@ -4290,7 +4290,7 @@ Error generating stack: ` + x.message + `
           Gn(l, a), fo(a), v = a.child, v.flags & 8192 && (x = v.memoizedState !== null, v.stateNode.isHidden = x, !x || v.alternate !== null && v.alternate.memoizedState !== null || (Lf = nr())), g & 4 && U1(a);
           break;
         case 22:
-          if (pe = p !== null && p.memoizedState !== null, a.mode & 1 ? (Ar = (ee = Ar) || pe, Gn(l, a), Ar = ee) : Gn(l, a), fo(a), g & 8192) {
+          if (pe = p !== null && p.memoizedState !== null, a.mode & 1 ? (Pr = (ee = Pr) || pe, Gn(l, a), Pr = ee) : Gn(l, a), fo(a), g & 8192) {
             if (ee = a.memoizedState !== null, (a.stateNode.isHidden = ee) && !pe && (a.mode & 1) !== 0) for (Ne = a, pe = a.child; pe !== null; ) {
               for (me = Ne = pe; Ne !== null; ) {
                 switch (ce = Ne, $e = ce.child, ce.tag) {
@@ -4411,12 +4411,12 @@ Error generating stack: ` + x.message + `
         if (v.tag === 22 && g) {
           var M = v.memoizedState !== null || od;
           if (!M) {
-            var F = v.alternate, B = F !== null && F.memoizedState !== null || Ar;
+            var F = v.alternate, B = F !== null && F.memoizedState !== null || Pr;
             F = od;
-            var ee = Ar;
-            if (od = M, (Ar = B) && !ee) for (Ne = v; Ne !== null; ) M = Ne, B = M.child, M.tag === 22 && M.memoizedState !== null ? Y1(v) : B !== null ? (B.return = M, Ne = B) : Y1(v);
+            var ee = Pr;
+            if (od = M, (Pr = B) && !ee) for (Ne = v; Ne !== null; ) M = Ne, B = M.child, M.tag === 22 && M.memoizedState !== null ? Y1(v) : B !== null ? (B.return = M, Ne = B) : Y1(v);
             for (; x !== null; ) Ne = x, X1(x), x = x.sibling;
-            Ne = v, od = F, Ar = ee;
+            Ne = v, od = F, Pr = ee;
           }
           G1(a);
         } else (v.subtreeFlags & 8772) !== 0 && x !== null ? (x.return = v, Ne = x) : G1(a);
@@ -4432,11 +4432,11 @@ Error generating stack: ` + x.message + `
               case 0:
               case 11:
               case 15:
-                Ar || sd(5, l);
+                Pr || sd(5, l);
                 break;
               case 1:
                 var g = l.stateNode;
-                if (l.flags & 4 && !Ar) if (p === null) g.componentDidMount();
+                if (l.flags & 4 && !Pr) if (p === null) g.componentDidMount();
                 else {
                   var v = l.elementType === l.type ? p.memoizedProps : qn(l.type, p.memoizedProps);
                   g.componentDidUpdate(v, p.memoizedState, g.__reactInternalSnapshotBeforeUpdate);
@@ -4502,7 +4502,7 @@ Error generating stack: ` + x.message + `
               default:
                 throw Error(r(163));
             }
-            Ar || l.flags & 512 && jf(l);
+            Pr || l.flags & 512 && jf(l);
           } catch (ce) {
             Zt(l, l.return, ce);
           }
@@ -4588,21 +4588,21 @@ Error generating stack: ` + x.message + `
         Ne = l.return;
       }
     }
-    var JN = Math.ceil, ad = O.ReactCurrentDispatcher, zf = O.ReactCurrentOwner, Nn = O.ReactCurrentBatchConfig, yt = 0, vr = null, lr = null, Sr = 0, mn = 0, ii = ps(0), hr = 0, Yl = null, ta = 0, id = 0, Ff = 0, Kl = null, Yr = null, Lf = 0, li = 1 / 0, Wo = null, ld = !1, Bf = null, ys = null, cd = !1, vs = null, ud = 0, Zl = 0, Wf = null, dd = -1, pd = 0;
-    function Fr() {
+    var JN = Math.ceil, ad = O.ReactCurrentDispatcher, zf = O.ReactCurrentOwner, Nn = O.ReactCurrentBatchConfig, yt = 0, vr = null, lr = null, Cr = 0, mn = 0, ii = ps(0), hr = 0, Yl = null, ta = 0, id = 0, Ff = 0, Kl = null, Yr = null, Lf = 0, li = 1 / 0, Wo = null, ld = !1, Bf = null, ys = null, cd = !1, vs = null, ud = 0, Zl = 0, Wf = null, dd = -1, pd = 0;
+    function Lr() {
       return (yt & 6) !== 0 ? nr() : dd !== -1 ? dd : dd = nr();
     }
     function bs(a) {
-      return (a.mode & 1) === 0 ? 1 : (yt & 2) !== 0 && Sr !== 0 ? Sr & -Sr : NN.transition !== null ? (pd === 0 && (pd = H0()), pd) : (a = Ot, a !== 0 || (a = window.event, a = a === void 0 ? 16 : Z0(a.type)), a);
+      return (a.mode & 1) === 0 ? 1 : (yt & 2) !== 0 && Cr !== 0 ? Cr & -Cr : NN.transition !== null ? (pd === 0 && (pd = H0()), pd) : (a = Ot, a !== 0 || (a = window.event, a = a === void 0 ? 16 : Z0(a.type)), a);
     }
     function Jn(a, l, p, g) {
       if (50 < Zl) throw Zl = 0, Wf = null, Error(r(185));
-      xl(a, p, g), ((yt & 2) === 0 || a !== vr) && (a === vr && ((yt & 2) === 0 && (id |= p), hr === 4 && ws(a, Sr)), Kr(a, g), p === 1 && yt === 0 && (l.mode & 1) === 0 && (li = nr() + 500, Lu && fs()));
+      xl(a, p, g), ((yt & 2) === 0 || a !== vr) && (a === vr && ((yt & 2) === 0 && (id |= p), hr === 4 && ws(a, Cr)), Kr(a, g), p === 1 && yt === 0 && (l.mode & 1) === 0 && (li = nr() + 500, Lu && fs()));
     }
     function Kr(a, l) {
       var p = a.callbackNode;
       NM(a, l);
-      var g = wu(a, a === vr ? Sr : 0);
+      var g = wu(a, a === vr ? Cr : 0);
       if (g === 0) p !== null && L0(p), a.callbackNode = null, a.callbackPriority = 0;
       else if (l = g & -g, a.callbackPriority !== l) {
         if (p != null && L0(p), l === 1) a.tag === 0 ? MN(Z1.bind(null, a)) : Iw(Z1.bind(null, a)), $N(function() {
@@ -4634,7 +4634,7 @@ Error generating stack: ` + x.message + `
       if (dd = -1, pd = 0, (yt & 6) !== 0) throw Error(r(327));
       var p = a.callbackNode;
       if (ci() && a.callbackNode !== p) return null;
-      var g = wu(a, a === vr ? Sr : 0);
+      var g = wu(a, a === vr ? Cr : 0);
       if (g === 0) return null;
       if ((g & 30) !== 0 || (g & a.expiredLanes) !== 0 || l) l = hd(a, g);
       else {
@@ -4642,7 +4642,7 @@ Error generating stack: ` + x.message + `
         var v = yt;
         yt |= 2;
         var x = ex();
-        (vr !== a || Sr !== l) && (Wo = null, li = nr() + 500, na(a, l));
+        (vr !== a || Cr !== l) && (Wo = null, li = nr() + 500, na(a, l));
         do
           try {
             ZN();
@@ -4651,7 +4651,7 @@ Error generating stack: ` + x.message + `
             Q1(a, F);
           }
         while (!0);
-        sf(), ad.current = x, yt = v, lr !== null ? l = 0 : (vr = null, Sr = 0, l = hr);
+        sf(), ad.current = x, yt = v, lr !== null ? l = 0 : (vr = null, Cr = 0, l = hr);
       }
       if (l !== 0) {
         if (l === 2 && (v = wh(a), v !== 0 && (g = v, l = Hf(a, v))), l === 1) throw p = Yl, na(a, 0), ws(a, g), Kr(a, nr()), p;
@@ -4669,7 +4669,7 @@ Error generating stack: ` + x.message + `
               if (ws(a, g), (g & 130023424) === g && (l = Lf + 500 - nr(), 10 < l)) {
                 if (wu(a, 0) !== 0) break;
                 if (v = a.suspendedLanes, (v & g) !== g) {
-                  Fr(), a.pingedLanes |= a.suspendedLanes & v;
+                  Lr(), a.pingedLanes |= a.suspendedLanes & v;
                   break;
                 }
                 a.timeoutHandle = Gh(oa.bind(null, a, Yr, Wo), l);
@@ -4785,7 +4785,7 @@ Error generating stack: ` + x.message + `
             g = g.type.childContextTypes, g != null && zu();
             break;
           case 3:
-            oi(), zt(Xr), zt(Dr), ff();
+            oi(), zt(Xr), zt(Mr), ff();
             break;
           case 5:
             pf(g);
@@ -4808,7 +4808,7 @@ Error generating stack: ` + x.message + `
         }
         p = p.return;
       }
-      if (vr = a, lr = a = xs(a.current, null), Sr = mn = l, hr = 0, Yl = null, Ff = id = ta = 0, Yr = Kl = null, Zs !== null) {
+      if (vr = a, lr = a = xs(a.current, null), Cr = mn = l, hr = 0, Yl = null, Ff = id = ta = 0, Yr = Kl = null, Zs !== null) {
         for (l = 0; l < Zs.length; l++) if (p = Zs[l], g = p.interleaved, g !== null) {
           p.interleaved = null;
           var v = g.next, x = p.pending;
@@ -4839,7 +4839,7 @@ Error generating stack: ` + x.message + `
           }
           e: {
             var x = a, M = p.return, F = p, B = l;
-            if (l = Sr, F.flags |= 32768, B !== null && typeof B == "object" && typeof B.then == "function") {
+            if (l = Cr, F.flags |= 32768, B !== null && typeof B == "object" && typeof B.then == "function") {
               var ee = B, pe = F, me = pe.tag;
               if ((pe.mode & 1) === 0 && (me === 0 || me === 11 || me === 15)) {
                 var ce = pe.alternate;
@@ -4902,13 +4902,13 @@ Error generating stack: ` + x.message + `
       return ad.current = ed, a === null ? ed : a;
     }
     function Xf() {
-      (hr === 0 || hr === 3 || hr === 2) && (hr = 4), vr === null || (ta & 268435455) === 0 && (id & 268435455) === 0 || ws(vr, Sr);
+      (hr === 0 || hr === 3 || hr === 2) && (hr = 4), vr === null || (ta & 268435455) === 0 && (id & 268435455) === 0 || ws(vr, Cr);
     }
     function hd(a, l) {
       var p = yt;
       yt |= 2;
       var g = ex();
-      (vr !== a || Sr !== l) && (Wo = null, na(a, l));
+      (vr !== a || Cr !== l) && (Wo = null, na(a, l));
       do
         try {
           KN();
@@ -4918,7 +4918,7 @@ Error generating stack: ` + x.message + `
         }
       while (!0);
       if (sf(), yt = p, ad.current = g, lr !== null) throw Error(r(261));
-      return vr = null, Sr = 0, hr;
+      return vr = null, Cr = 0, hr;
     }
     function KN() {
       for (; lr !== null; ) tx(lr);
@@ -4978,7 +4978,7 @@ Error generating stack: ` + x.message + `
       if (a.finishedWork = null, a.finishedLanes = 0, p === a.current) throw Error(r(177));
       a.callbackNode = null, a.callbackPriority = 0;
       var x = p.lanes | p.childLanes;
-      if (AM(a, x), a === vr && (lr = vr = null, Sr = 0), (p.subtreeFlags & 2064) === 0 && (p.flags & 2064) === 0 || cd || (cd = !0, ax(gu, function() {
+      if (AM(a, x), a === vr && (lr = vr = null, Cr = 0), (p.subtreeFlags & 2064) === 0 && (p.flags & 2064) === 0 || cd || (cd = !0, ax(gu, function() {
         return ci(), null;
       })), x = (p.flags & 15990) !== 0, (p.subtreeFlags & 15990) !== 0 || x) {
         x = Nn.transition, Nn.transition = null;
@@ -5103,7 +5103,7 @@ Error generating stack: ` + x.message + `
       return !1;
     }
     function nx(a, l, p) {
-      l = si(p, l), l = w1(a, l, 1), a = _s(a, l, 1), l = Fr(), a !== null && (xl(a, 1, l), Kr(a, l));
+      l = si(p, l), l = w1(a, l, 1), a = _s(a, l, 1), l = Lr(), a !== null && (xl(a, 1, l), Kr(a, l));
     }
     function Zt(a, l, p) {
       if (a.tag === 3) nx(a, a, p);
@@ -5114,7 +5114,7 @@ Error generating stack: ` + x.message + `
         } else if (l.tag === 1) {
           var g = l.stateNode;
           if (typeof l.type.getDerivedStateFromError == "function" || typeof g.componentDidCatch == "function" && (ys === null || !ys.has(g))) {
-            a = si(p, a), a = x1(l, a, 1), l = _s(l, a, 1), a = Fr(), l !== null && (xl(l, 1, a), Kr(l, a));
+            a = si(p, a), a = x1(l, a, 1), l = _s(l, a, 1), a = Lr(), l !== null && (xl(l, 1, a), Kr(l, a));
             break;
           }
         }
@@ -5123,11 +5123,11 @@ Error generating stack: ` + x.message + `
     }
     function eA(a, l, p) {
       var g = a.pingCache;
-      g !== null && g.delete(l), l = Fr(), a.pingedLanes |= a.suspendedLanes & p, vr === a && (Sr & p) === p && (hr === 4 || hr === 3 && (Sr & 130023424) === Sr && 500 > nr() - Lf ? na(a, 0) : Ff |= p), Kr(a, l);
+      g !== null && g.delete(l), l = Lr(), a.pingedLanes |= a.suspendedLanes & p, vr === a && (Cr & p) === p && (hr === 4 || hr === 3 && (Cr & 130023424) === Cr && 500 > nr() - Lf ? na(a, 0) : Ff |= p), Kr(a, l);
     }
     function ox(a, l) {
       l === 0 && ((a.mode & 1) === 0 ? l = 1 : (l = bu, bu <<= 1, (bu & 130023424) === 0 && (bu = 4194304)));
-      var p = Fr();
+      var p = Lr();
       a = Fo(a, l), a !== null && (xl(a, l, p), Kr(a, p));
     }
     function tA(a) {
@@ -5161,10 +5161,10 @@ Error generating stack: ` + x.message + `
         case 2:
           var g = l.type;
           nd(a, l), a = l.pendingProps;
-          var v = Ka(l, Dr.current);
+          var v = Ka(l, Mr.current);
           ni(l, p), v = gf(null, l, g, a, v, p);
           var x = yf();
-          return l.flags |= 1, typeof v == "object" && v !== null && typeof v.render == "function" && v.$$typeof === void 0 ? (l.tag = 1, l.memoizedState = null, l.updateQueue = null, Gr(g) ? (x = !0, Fu(l)) : x = !1, l.memoizedState = v.state !== null && v.state !== void 0 ? v.state : null, uf(l), v.updater = td, l.stateNode = v, v._reactInternals = l, Cf(l, g, a, p), l = Tf(null, l, g, !0, x, p)) : (l.tag = 0, Wt && x && Qh(l), zr(null, l, v, p), l = l.child), l;
+          return l.flags |= 1, typeof v == "object" && v !== null && typeof v.render == "function" && v.$$typeof === void 0 ? (l.tag = 1, l.memoizedState = null, l.updateQueue = null, Gr(g) ? (x = !0, Fu(l)) : x = !1, l.memoizedState = v.state !== null && v.state !== void 0 ? v.state : null, uf(l), v.updater = td, l.stateNode = v, v._reactInternals = l, Cf(l, g, a, p), l = Tf(null, l, g, !0, x, p)) : (l.tag = 0, Wt && x && Qh(l), Fr(null, l, v, p), l = l.child), l;
         case 16:
           g = l.elementType;
           e: {
@@ -5210,27 +5210,27 @@ Error generating stack: ` + x.message + `
                 l = Bo(a, l, p);
                 break e;
               }
-              zr(a, l, g, p);
+              Fr(a, l, g, p);
             }
             l = l.child;
           }
           return l;
         case 5:
-          return Yw(l), a === null && rf(l), g = l.type, v = l.pendingProps, x = a !== null ? a.memoizedProps : null, M = v.children, Xh(g, v) ? M = null : x !== null && Xh(g, x) && (l.flags |= 32), D1(a, l), zr(a, l, M, p), l.child;
+          return Yw(l), a === null && rf(l), g = l.type, v = l.pendingProps, x = a !== null ? a.memoizedProps : null, M = v.children, Xh(g, v) ? M = null : x !== null && Xh(g, x) && (l.flags |= 32), D1(a, l), Fr(a, l, M, p), l.child;
         case 6:
           return a === null && rf(l), null;
         case 13:
           return P1(a, l, p);
         case 4:
-          return df(l, l.stateNode.containerInfo), g = l.pendingProps, a === null ? l.child = ti(l, null, g, p) : zr(a, l, g, p), l.child;
+          return df(l, l.stateNode.containerInfo), g = l.pendingProps, a === null ? l.child = ti(l, null, g, p) : Fr(a, l, g, p), l.child;
         case 11:
           return g = l.type, v = l.pendingProps, v = l.elementType === g ? v : qn(g, v), E1(a, l, g, v, p);
         case 7:
-          return zr(a, l, l.pendingProps, p), l.child;
+          return Fr(a, l, l.pendingProps, p), l.child;
         case 8:
-          return zr(a, l, l.pendingProps.children, p), l.child;
+          return Fr(a, l, l.pendingProps.children, p), l.child;
         case 12:
-          return zr(a, l, l.pendingProps.children, p), l.child;
+          return Fr(a, l, l.pendingProps.children, p), l.child;
         case 10:
           e: {
             if (g = l.type._context, v = l.pendingProps, x = l.memoizedProps, M = v.value, jt(Uu, g._currentValue), g._currentValue = M, x !== null) if (Vn(x.value, M)) {
@@ -5281,11 +5281,11 @@ Error generating stack: ` + x.message + `
               }
               x = M;
             }
-            zr(a, l, v.children, p), l = l.child;
+            Fr(a, l, v.children, p), l = l.child;
           }
           return l;
         case 9:
-          return v = l.type, g = l.pendingProps.children, ni(l, p), v = Dn(v), g = g(v), l.flags |= 1, zr(a, l, g, p), l.child;
+          return v = l.type, g = l.pendingProps.children, ni(l, p), v = Dn(v), g = g(v), l.flags |= 1, Fr(a, l, g, p), l.child;
         case 14:
           return g = l.type, v = qn(g, l.pendingProps), v = qn(g.type, v), $1(a, l, g, v, p);
         case 15:
@@ -5413,10 +5413,10 @@ Error generating stack: ` + x.message + `
       return l;
     }
     function lx(a, l, p, g, v, x, M, F, B) {
-      return a = Kf(p, g, !0, a, v, x, M, F, B), a.context = ix(null), p = a.current, g = Fr(), v = bs(p), x = Lo(g, v), x.callback = l ?? null, _s(p, x, v), a.current.lanes = v, xl(a, v, g), Kr(a, g), a;
+      return a = Kf(p, g, !0, a, v, x, M, F, B), a.context = ix(null), p = a.current, g = Lr(), v = bs(p), x = Lo(g, v), x.callback = l ?? null, _s(p, x, v), a.current.lanes = v, xl(a, v, g), Kr(a, g), a;
     }
     function _d(a, l, p, g) {
-      var v = l.current, x = Fr(), M = bs(v);
+      var v = l.current, x = Lr(), M = bs(v);
       return p = ix(p), l.context === null ? l.context = p : l.pendingContext = p, l = Lo(x, M), l.payload = { element: a }, g = g === void 0 ? null : g, g !== null && (l.callback = g), a = _s(v, l, M), a !== null && (Jn(a, v, M, x), Xu(a, v, M)), M;
     }
     function gd(a) {
@@ -5532,7 +5532,7 @@ Error generating stack: ` + x.message + `
           ra(function() {
             var g = Fo(a, 1);
             if (g !== null) {
-              var v = Fr();
+              var v = Lr();
               Jn(g, a, 1, v);
             }
           }), Zf(a, 1);
@@ -5541,7 +5541,7 @@ Error generating stack: ` + x.message + `
       if (a.tag === 13) {
         var l = Fo(a, 134217728);
         if (l !== null) {
-          var p = Fr();
+          var p = Lr();
           Jn(l, a, 134217728, p);
         }
         Zf(a, 134217728);
@@ -5550,7 +5550,7 @@ Error generating stack: ` + x.message + `
       if (a.tag === 13) {
         var l = bs(a), p = Fo(a, l);
         if (p !== null) {
-          var g = Fr();
+          var g = Lr();
           Jn(p, a, l, g);
         }
         Zf(a, l);
@@ -5722,9 +5722,9 @@ Error generating stack: ` + x.message + `
         return (o = n.parentNode) == null ? void 0 : o.removeChild(n);
       }), this.tags = [], this.ctr = 0;
     }, t;
-  }(), Pr = "-ms-", up = "-moz-", St = "-webkit-", eT = "comm", tb = "rule", rb = "decl", kA = "@import", tT = "@keyframes", EA = "@layer", $A = Math.abs, jp = String.fromCharCode, TA = Object.assign;
+  }(), jr = "-ms-", up = "-moz-", St = "-webkit-", eT = "comm", tb = "rule", rb = "decl", kA = "@import", tT = "@keyframes", EA = "@layer", $A = Math.abs, jp = String.fromCharCode, TA = Object.assign;
   function OA(t, e) {
-    return Er(t, 0) ^ 45 ? (((e << 2 ^ Er(t, 0)) << 2 ^ Er(t, 1)) << 2 ^ Er(t, 2)) << 2 ^ Er(t, 3) : 0;
+    return $r(t, 0) ^ 45 ? (((e << 2 ^ $r(t, 0)) << 2 ^ $r(t, 1)) << 2 ^ $r(t, 2)) << 2 ^ $r(t, 3) : 0;
   }
   function rT(t) {
     return t.trim();
@@ -5738,7 +5738,7 @@ Error generating stack: ` + x.message + `
   function Ky(t, e) {
     return t.indexOf(e);
   }
-  function Er(t, e) {
+  function $r(t, e) {
     return t.charCodeAt(e) | 0;
   }
   function zc(t, e, r) {
@@ -5767,13 +5767,13 @@ Error generating stack: ` + x.message + `
     return ur;
   }
   function AA() {
-    return ur = ln > 0 ? Er(dl, --ln) : 0, ol--, ur === 10 && (ol = 1, Rp--), ur;
+    return ur = ln > 0 ? $r(dl, --ln) : 0, ol--, ur === 10 && (ol = 1, Rp--), ur;
   }
   function xn() {
-    return ur = ln < nT ? Er(dl, ln++) : 0, ol++, ur === 10 && (ol = 1, Rp++), ur;
+    return ur = ln < nT ? $r(dl, ln++) : 0, ol++, ur === 10 && (ol = 1, Rp++), ur;
   }
   function ko() {
-    return Er(dl, ln);
+    return $r(dl, ln);
   }
   function Zd() {
     return ln;
@@ -5879,7 +5879,7 @@ Error generating stack: ` + x.message + `
       switch (w = $, $ = xn()) {
         // (
         case 40:
-          if (w != 108 && Er(A, u - 1) == 58) {
+          if (w != 108 && $r(A, u - 1) == 58) {
             Ky(A += Ct(Qd($), "&", "&\f"), "&\f") != -1 && (C = -1);
             break;
           }
@@ -5936,7 +5936,7 @@ Error generating stack: ` + x.message + `
                 if (m === 0)
                   ep(A, e, D, D, O, s, u, c, N);
                 else
-                  switch (_ === 99 && Er(A, 3) === 110 ? 100 : _) {
+                  switch (_ === 99 && $r(A, 3) === 110 ? 100 : _) {
                     // d l m s
                     case 100:
                     case 108:
@@ -6121,32 +6121,32 @@ Error generating stack: ` + x.message + `
       case 4810:
       case 6968:
       case 2756:
-        return St + t + up + t + Pr + t + t;
+        return St + t + up + t + jr + t + t;
       // flex, flex-direction
       case 6828:
       case 4268:
-        return St + t + Pr + t + t;
+        return St + t + jr + t + t;
       // order
       case 6165:
-        return St + t + Pr + "flex-" + t + t;
+        return St + t + jr + "flex-" + t + t;
       // align-items
       case 5187:
-        return St + t + Ct(t, /(\w+).+(:[^]+)/, St + "box-$1$2" + Pr + "flex-$1$2") + t;
+        return St + t + Ct(t, /(\w+).+(:[^]+)/, St + "box-$1$2" + jr + "flex-$1$2") + t;
       // align-self
       case 5443:
-        return St + t + Pr + "flex-item-" + Ct(t, /flex-|-self/, "") + t;
+        return St + t + jr + "flex-item-" + Ct(t, /flex-|-self/, "") + t;
       // align-content
       case 4675:
-        return St + t + Pr + "flex-line-pack" + Ct(t, /align-content|flex-|-self/, "") + t;
+        return St + t + jr + "flex-line-pack" + Ct(t, /align-content|flex-|-self/, "") + t;
       // flex-shrink
       case 5548:
-        return St + t + Pr + Ct(t, "shrink", "negative") + t;
+        return St + t + jr + Ct(t, "shrink", "negative") + t;
       // flex-basis
       case 5292:
-        return St + t + Pr + Ct(t, "basis", "preferred-size") + t;
+        return St + t + jr + Ct(t, "basis", "preferred-size") + t;
       // flex-grow
       case 6060:
-        return St + "box-" + Ct(t, "-grow", "") + St + t + Pr + Ct(t, "grow", "positive") + t;
+        return St + "box-" + Ct(t, "-grow", "") + St + t + jr + Ct(t, "grow", "positive") + t;
       // transition
       case 4554:
         return St + Ct(t, /([^-])(transform)/g, "$1" + St + "$2") + t;
@@ -6159,7 +6159,7 @@ Error generating stack: ` + x.message + `
         return Ct(t, /(image-set\([^]*)/, St + "$1$`$1");
       // justify-content
       case 4968:
-        return Ct(Ct(t, /(.+:)(flex-)?(.*)/, St + "box-pack:$3" + Pr + "flex-pack:$3"), /s.+-b[^;]+/, "justify") + St + t + t;
+        return Ct(Ct(t, /(.+:)(flex-)?(.*)/, St + "box-pack:$3" + jr + "flex-pack:$3"), /s.+-b[^;]+/, "justify") + St + t + t;
       // (margin|padding)-inline-(start|end)
       case 4095:
       case 3583:
@@ -6179,13 +6179,13 @@ Error generating stack: ` + x.message + `
       case 5789:
       case 5021:
       case 4765:
-        if (bo(t) - 1 - e > 6) switch (Er(t, e + 1)) {
+        if (bo(t) - 1 - e > 6) switch ($r(t, e + 1)) {
           // (m)ax-content, (m)in-content
           case 109:
-            if (Er(t, e + 4) !== 45) break;
+            if ($r(t, e + 4) !== 45) break;
           // (f)ill-available, (f)it-content
           case 102:
-            return Ct(t, /(.+:)(.+)-([^]+)/, "$1" + St + "$2-$3$1" + up + (Er(t, e + 3) == 108 ? "$3" : "$2-$3")) + t;
+            return Ct(t, /(.+:)(.+)-([^]+)/, "$1" + St + "$2-$3$1" + up + ($r(t, e + 3) == 108 ? "$3" : "$2-$3")) + t;
           // (s)tretch
           case 115:
             return ~Ky(t, "stretch") ? iT(Ct(t, "stretch", "fill-available"), e) + t : t;
@@ -6193,32 +6193,32 @@ Error generating stack: ` + x.message + `
         break;
       // position: sticky
       case 4949:
-        if (Er(t, e + 1) !== 115) break;
+        if ($r(t, e + 1) !== 115) break;
       // display: (flex|inline-flex)
       case 6444:
-        switch (Er(t, bo(t) - 3 - (~Ky(t, "!important") && 10))) {
+        switch ($r(t, bo(t) - 3 - (~Ky(t, "!important") && 10))) {
           // stic(k)y
           case 107:
             return Ct(t, ":", ":" + St) + t;
           // (inline-)?fl(e)x
           case 101:
-            return Ct(t, /(.+:)([^;!]+)(;|!.+)?/, "$1" + St + (Er(t, 14) === 45 ? "inline-" : "") + "box$3$1" + St + "$2$3$1" + Pr + "$2box$3") + t;
+            return Ct(t, /(.+:)([^;!]+)(;|!.+)?/, "$1" + St + ($r(t, 14) === 45 ? "inline-" : "") + "box$3$1" + St + "$2$3$1" + jr + "$2box$3") + t;
         }
         break;
       // writing-mode
       case 5936:
-        switch (Er(t, e + 11)) {
+        switch ($r(t, e + 11)) {
           // vertical-l(r)
           case 114:
-            return St + t + Pr + Ct(t, /[svh]\w+-[tblr]{2}/, "tb") + t;
+            return St + t + jr + Ct(t, /[svh]\w+-[tblr]{2}/, "tb") + t;
           // vertical-r(l)
           case 108:
-            return St + t + Pr + Ct(t, /[svh]\w+-[tblr]{2}/, "tb-rl") + t;
+            return St + t + jr + Ct(t, /[svh]\w+-[tblr]{2}/, "tb-rl") + t;
           // horizontal(-)tb
           case 45:
-            return St + t + Pr + Ct(t, /[svh]\w+-[tblr]{2}/, "lr") + t;
+            return St + t + jr + Ct(t, /[svh]\w+-[tblr]{2}/, "lr") + t;
         }
-        return St + t + Pr + t + t;
+        return St + t + jr + t + t;
     }
     return t;
   }
@@ -6247,7 +6247,7 @@ Error generating stack: ` + x.message + `
               }), tc(e, {
                 props: [Ct(s, /:(plac\w+)/, ":" + up + "$1")]
               }), tc(e, {
-                props: [Ct(s, /:(plac\w+)/, Pr + "input-$1")]
+                props: [Ct(s, /:(plac\w+)/, jr + "input-$1")]
               })], o);
           }
           return "";
@@ -7195,7 +7195,7 @@ Error generating stack: ` + x.message + `
       e[r] = gT(t[r]);
     }), e;
   }
-  function Ir(t, e, r = {
+  function zr(t, e, r = {
     clone: !0
   }) {
     const n = r.clone ? {
@@ -7203,7 +7203,7 @@ Error generating stack: ` + x.message + `
     } : t;
     return Co(t) && Co(e) && Object.keys(e).forEach((o) => {
       /* @__PURE__ */ E.isValidElement(e[o]) || _T.isValidElementType(e[o]) ? n[o] = e[o] : Co(e[o]) && // Avoid prototype pollution
-      Object.prototype.hasOwnProperty.call(t, o) && Co(t[o]) ? n[o] = Ir(t[o], e[o], r) : r.clone ? n[o] = Co(e[o]) ? gT(e[o]) : e[o] : n[o] = e[o];
+      Object.prototype.hasOwnProperty.call(t, o) && Co(t[o]) ? n[o] = zr(t[o], e[o], r) : r.clone ? n[o] = Co(e[o]) ? gT(e[o]) : e[o] : n[o] = e[o];
     }), n;
   }
   const DP = (t) => {
@@ -7307,7 +7307,7 @@ Error generating stack: ` + x.message + `
     borderRadius: 4
   };
   function Oc(t, e) {
-    return e ? Ir(t, e, {
+    return e ? zr(t, e, {
       clone: !1
       // No need to clone deep, it's way faster.
     }) : t;
@@ -8028,7 +8028,7 @@ Error generating stack: ` + x.message + `
       shape: s = {},
       ...i
     } = t, c = MP(r), d = vT(o);
-    let h = Ir({
+    let h = zr({
       breakpoints: c,
       direction: "ltr",
       components: {},
@@ -8043,7 +8043,7 @@ Error generating stack: ` + x.message + `
         ...s
       }
     }, i);
-    return h = jP(h), h.applyStyles = kj, h = e.reduce((m, u) => Ir(m, u), h), h.unstable_sxConfig = {
+    return h = jP(h), h.applyStyles = kj, h = e.reduce((m, u) => zr(m, u), h), h.unstable_sxConfig = {
       ...au,
       ...i?.unstable_sxConfig
     }, h.unstable_sx = function(u) {
@@ -8598,11 +8598,11 @@ Error generating stack: ` + x.message + `
       t.type.muiName ?? t.type?._payload?.value?.muiName
     ) !== -1;
   }
-  function Tr(t) {
+  function Or(t) {
     return t && t.ownerDocument || document;
   }
   function oo(t) {
-    return Tr(t).defaultView || window;
+    return Or(t).defaultView || window;
   }
   function nv(t, e) {
     typeof t == "function" ? t(e) : t && (t.current = e);
@@ -9375,7 +9375,7 @@ try {
         css: D,
         varsWithDefaults: A
       } = mm(O, e);
-      _ = Ir(_, A), y[T] = {
+      _ = zr(_, A), y[T] = {
         css: D,
         vars: N
       };
@@ -9385,7 +9385,7 @@ try {
         vars: O,
         varsWithDefaults: N
       } = mm(w, e);
-      _ = Ir(_, N), y[c] = {
+      _ = zr(_, N), y[c] = {
         css: T,
         vars: O
       };
@@ -9413,7 +9413,7 @@ try {
         return Object.entries(y).forEach(([, {
           vars: O
         }]) => {
-          T = Ir(T, O);
+          T = zr(T, O);
         }), T;
       },
       generateStyleSheets: () => {
@@ -9739,7 +9739,7 @@ try {
     500: "#f44336",
     700: "#d32f2f",
     800: "#c62828"
-  }, kr = {
+  }, Er = {
     100: "#ffe0b2",
     200: "#ffcc80",
     300: "#ffb74d",
@@ -9898,14 +9898,14 @@ try {
   }
   function V5(t = "light") {
     return t === "dark" ? {
-      main: kr[400],
-      light: kr[300],
-      dark: kr[700]
+      main: Er[400],
+      light: Er[300],
+      dark: Er[700]
     } : {
       main: "#ed6c02",
       // closest to orange[800] that pass 3:1.
-      light: kr[500],
-      dark: kr[900]
+      light: Er[500],
+      dark: Er[900]
     };
   }
   function yb(t) {
@@ -9934,7 +9934,7 @@ try {
       return tS(b, "light", $, n), tS(b, "dark", T, n), b.contrastText || (b.contrastText = u(b.main)), b;
     };
     let y;
-    return e === "light" ? y = LT() : e === "dark" && (y = BT()), Ir({
+    return e === "light" ? y = LT() : e === "dark" && (y = BT()), zr({
       // A collection of common colors.
       common: {
         ...Wc
@@ -10074,7 +10074,7 @@ try {
         letterSpacing: "inherit"
       }
     };
-    return Ir({
+    return zr({
       htmlFontSize: d,
       pxToRem: y,
       fontFamily: r,
@@ -10200,7 +10200,7 @@ export default theme;`;
     t.generateThemeVars === void 0)
       throw new Error(Jo(20));
     const m = yb(s), u = Up(t);
-    let _ = Ir(u, {
+    let _ = zr(u, {
       mixins: q5(u.breakpoints, n),
       palette: m,
       // Don't use [...shadows] until you've verified its transpiled code is not invoking the iterator protocol.
@@ -10211,7 +10211,7 @@ export default theme;`;
         ...r4
       }
     });
-    return _ = Ir(_, h), _ = e.reduce((y, w) => Ir(y, w), _), _.unstable_sxConfig = {
+    return _ = zr(_, h), _ = e.reduce((y, w) => zr(y, w), _), _.unstable_sxConfig = {
       ...au,
       ...h?.unstable_sxConfig
     }, _.unstable_sx = function(w) {
@@ -10419,7 +10419,7 @@ export default theme;`;
         const q = k[U];
         U !== "tonalOffset" && q && typeof q == "object" && (q.main && ne(k[U], "mainChannel", _c(gc(q.main))), q.light && ne(k[U], "lightChannel", _c(gc(q.light))), q.dark && ne(k[U], "darkChannel", _c(gc(q.dark))), q.contrastText && ne(k[U], "contrastTextChannel", _c(gc(q.contrastText))), U === "text" && (Ho(k[U], "primary"), Ho(k[U], "secondary")), U === "action" && (q.active && Ho(k[U], "active"), q.selected && Ho(k[U], "selected")));
       });
-    }), O = e.reduce((z, k) => Ir(z, k), O);
+    }), O = e.reduce((z, k) => zr(z, k), O);
     const N = {
       prefix: s,
       disableCssColorScheme: o,
@@ -10620,9 +10620,9 @@ export default theme;`;
         root: {
           textTransform: "uppercase",
           transition: "color .3s ease",
-          color: kr[200],
+          color: Er[200],
           "&:hover": {
-            color: kr[100]
+            color: Er[100]
           }
         }
       },
@@ -10657,9 +10657,9 @@ export default theme;`;
         root: {
           textTransform: "uppercase",
           transition: "color .3s ease",
-          color: kr[400],
+          color: Er[400],
           "&:hover": {
-            color: kr[300]
+            color: Er[300]
           }
         }
       }
@@ -10693,9 +10693,9 @@ export default theme;`;
         root: {
           textTransform: "uppercase",
           transition: "color .3s ease",
-          color: kr[200],
+          color: Er[200],
           "&:hover": {
-            color: kr[100]
+            color: Er[100]
           }
         }
       },
@@ -10722,9 +10722,9 @@ export default theme;`;
         root: {
           textTransform: "uppercase",
           transition: "color .3s ease",
-          color: kr[400],
+          color: Er[400],
           "&:hover": {
-            color: kr[300]
+            color: Er[300]
           }
         }
       }
@@ -10750,9 +10750,9 @@ export default theme;`;
         root: {
           textTransform: "uppercase",
           transition: "color .3s ease",
-          color: kr[400],
+          color: Er[400],
           "&:hover": {
-            color: kr[300]
+            color: Er[300]
           }
         }
       }
@@ -10778,9 +10778,9 @@ export default theme;`;
         root: {
           textTransform: "uppercase",
           transition: "color .3s ease",
-          color: kr[400],
+          color: Er[400],
           "&:hover": {
-            color: kr[300]
+            color: Er[300]
           }
         }
       }
@@ -10885,7 +10885,7 @@ export default theme;`;
   As.PERMISSION_ERROR;
   As.NOT_CONNECTED;
   const w4 = ["material", "echarts", "vis"];
-  class Br {
+  class wr {
     constructor(e) {
       this.props = this.applyDefaultProps(e), this.connId = `${this.props.name ? `${this.props.name}-` : ""}${Math.round(Math.random() * 1e6).toString().padStart(6, "0")}`, this.waitForSocketLib().then(() => this.startSocket()).catch((r) => {
         alert(`Socket connection could not be initialized: ${r}`);
@@ -10991,7 +10991,7 @@ export default theme;`;
           e = c.hostname, r = c.port, n = c.protocol.replace(":", "");
         }
         const i = o.lastIndexOf("/");
-        if (i !== -1 && (o = o.substring(0, i + 1)), Br.isWeb()) {
+        if (i !== -1 && (o = o.substring(0, i + 1)), wr.isWeb()) {
           const c = o.split("/");
           c.length > 2 && (c.pop(), c.pop(), w4.includes(c[c.length - 1]) && c.pop(), o = c.join("/"), o.endsWith("/") || (o += "/"));
         }
@@ -11006,7 +11006,7 @@ export default theme;`;
         token: this.props.token
       }), this._socket.on("connect", (i) => {
         window.addEventListener("storage", this.onAccessTokenUpdated);
-        const c = Br.readTokens();
+        const c = wr.readTokens();
         if (c && !c.owner) {
           const d = Date.now();
           this.saveTokens({
@@ -11082,7 +11082,7 @@ export default theme;`;
       r ? window.localStorage.setItem("iob_tokens", o) : window.sessionStorage.setItem("iob_tokens", o);
     }
     saveTokens(e, r) {
-      Br.saveTokensStatic(e, r, this.connId);
+      wr.saveTokensStatic(e, r, this.connId);
     }
     static deleteTokensStatic() {
       window.localStorage.removeItem("iob_tokens"), window.sessionStorage.removeItem("iob_tokens");
@@ -11094,12 +11094,12 @@ export default theme;`;
      * @param logout if logout is requested
      */
     deleteTokens(e, r) {
-      const n = Br.readTokens();
-      n && (r ? Br.deleteTokensStatic() : n.stayLoggedIn === e && n.owner === this.connId && (n.stayLoggedIn ? window.localStorage.removeItem("iob_tokens") : window.sessionStorage.removeItem("iob_tokens")));
+      const n = wr.readTokens();
+      n && (r ? wr.deleteTokensStatic() : n.stayLoggedIn === e && n.owner === this.connId && (n.stayLoggedIn ? window.localStorage.removeItem("iob_tokens") : window.sessionStorage.removeItem("iob_tokens")));
     }
     onAccessTokenUpdated = (e) => {
       if (e.key === "iob_tokens") {
-        const r = Br.readTokens();
+        const r = wr.readTokens();
         r && (console.log(`Tab ${this.connId} received updated token: ${r.access_token}`), this.updateTokenExpiration(r.access_token));
       }
     };
@@ -11165,7 +11165,7 @@ export default theme;`;
     }
     checkAccessTokenExpire() {
       if (this._refreshTimer && (clearTimeout(this._refreshTimer), this._refreshTimer = null), this.isSecure) {
-        const e = Br.readTokens();
+        const e = wr.readTokens();
         if (e) {
           const r = e.expires_in.getTime();
           if (r < Date.now() + 3e4) {
@@ -11225,7 +11225,7 @@ export default theme;`;
       for (let r = 1; r <= e; r++) {
         if (this.doLoadData().catch((n) => console.error(`Cannot load data: ${n}`)), this.loaded)
           return;
-        await cS(Br.isCloud() ? 5e3 : 1e3);
+        await cS(wr.isCloud() ? 5e3 : 1e3);
       }
     }
     /**
@@ -11241,7 +11241,7 @@ export default theme;`;
             return;
           }
         try {
-          this.props.admin5only && !Br.isWeb() && (!window.vendorPrefix || window.vendorPrefix === "@@vendorPrefix@@") ? this._systemConfig = await this.getCompactSystemConfig() : this._systemConfig = await this.getSystemConfig();
+          this.props.admin5only && !wr.isWeb() && (!window.vendorPrefix || window.vendorPrefix === "@@vendorPrefix@@") ? this._systemConfig = await this.getCompactSystemConfig() : this._systemConfig = await this.getSystemConfig();
         } catch (e) {
           this.onError(`Cannot read system config: ${e}`);
           return;
@@ -11297,7 +11297,7 @@ export default theme;`;
           }
         } else
           try {
-            const c = await (Br.isWeb() ? this.getStates(s) : this.getForeignStates(s));
+            const c = await (wr.isWeb() ? this.getStates(s) : this.getForeignStates(s));
             if (c)
               for (const [d, h] of Object.entries(c)) {
                 const m = o(d, h);
@@ -11527,7 +11527,7 @@ export default theme;`;
       // requestName,
       executor: c
     }) {
-      if (s && Br.isWeb())
+      if (s && wr.isWeb())
         return Promise.reject(new Error(As.NOT_ADMIN));
       if (e && !r && e in this._promises)
         return this._promises[e];
@@ -11695,7 +11695,7 @@ export default theme;`;
             n(this.objects);
             return;
           }
-          this._socket.emit(Br.isWeb() ? "getObjects" : "getAllObjects", (s, i) => {
+          this._socket.emit(wr.isWeb() ? "getObjects" : "getAllObjects", (s, i) => {
             r || this.props.onProgress?.(xo.OBJECTS_LOADED), s ? o(s) : (this.objects = i ?? {}, n(this.objects));
           });
         }
@@ -15490,7 +15490,7 @@ export default theme;`;
       A = s;
     else if (n) {
       const k = mv(n);
-      A = k && O3(k) ? Tr(k).body : Tr(null).body;
+      A = k && O3(k) ? Or(k).body : Or(null).body;
     }
     const j = !m && d && (!b || T) ? "none" : void 0, z = b ? {
       in: m,
@@ -17665,7 +17665,7 @@ export default theme;`;
     const m = ar($a(e), c), u = Ur((w) => {
       const b = h.current;
       h.current = !1;
-      const S = Tr(c.current);
+      const S = Or(c.current);
       if (!d.current || !c.current || "clientX" in w && jI(w, S))
         return;
       if (i.current) {
@@ -17689,7 +17689,7 @@ export default theme;`;
     };
     return s !== !1 && (y[s] = _(s)), E.useEffect(() => {
       if (s !== !1) {
-        const w = MS(s), b = Tr(c.current), S = () => {
+        const w = MS(s), b = Or(c.current), S = () => {
           i.current = !0;
         };
         return b.addEventListener(w, u), b.addEventListener("touchmove", S), () => {
@@ -17698,7 +17698,7 @@ export default theme;`;
       }
     }, [u, s]), n !== !1 && (y[n] = _(n)), E.useEffect(() => {
       if (n !== !1) {
-        const w = MS(n), b = Tr(c.current);
+        const w = MS(n), b = Or(c.current);
         return b.addEventListener(w, u), () => {
           b.removeEventListener(w, u);
         };
@@ -17706,7 +17706,7 @@ export default theme;`;
     }, [u, n]), /* @__PURE__ */ E.cloneElement(e, y);
   }
   function II(t) {
-    const e = Tr(t);
+    const e = Or(t);
     return e.body === t ? oo(t).innerWidth > e.documentElement.clientWidth : t.scrollHeight > t.clientHeight;
   }
   function Ac(t, e) {
@@ -17740,7 +17740,7 @@ export default theme;`;
           property: "padding-right",
           el: n
         }), n.style.paddingRight = `${NS(n) + i}px`;
-        const c = Tr(n).querySelectorAll(".mui-fixed");
+        const c = Or(n).querySelectorAll(".mui-fixed");
         [].forEach.call(c, (d) => {
           r.push({
             value: d.style.paddingRight,
@@ -17751,7 +17751,7 @@ export default theme;`;
       }
       let s;
       if (n.parentNode instanceof DocumentFragment)
-        s = Tr(n).body;
+        s = Or(n).body;
       else {
         const i = n.parentElement, c = oo(n);
         s = i?.nodeName === "HTML" && c.getComputedStyle(i).overflowY === "scroll" ? i : n;
@@ -17870,14 +17870,14 @@ export default theme;`;
     }, [r, c]), E.useEffect(() => {
       if (!c || !w.current)
         return;
-      const T = Tr(w.current);
+      const T = Or(w.current);
       return w.current.contains(T.activeElement) || (w.current.hasAttribute("tabIndex") || w.current.setAttribute("tabIndex", "-1"), y.current && w.current.focus()), () => {
         o || (u.current && u.current.focus && (d.current = !0, u.current.focus()), u.current = null);
       };
     }, [c]), E.useEffect(() => {
       if (!c || !w.current)
         return;
-      const T = Tr(w.current), O = (A) => {
+      const T = Or(w.current), O = (A) => {
         S.current = A, !(n || !i() || A.key !== "Tab") && T.activeElement === w.current && A.shiftKey && (d.current = !0, m.current && m.current.focus());
       }, N = () => {
         const A = w.current;
@@ -17957,7 +17957,7 @@ export default theme;`;
     } = t, u = E.useRef({}), _ = E.useRef(null), y = E.useRef(null), w = ar(y, m), [b, S] = E.useState(!h), C = YI(c);
     let $ = !0;
     (t["aria-hidden"] === "false" || t["aria-hidden"] === !1) && ($ = !1);
-    const T = () => Tr(_.current), O = () => (u.current.modalRef = y.current, u.current.mount = _.current, u.current), N = () => {
+    const T = () => Or(_.current), O = () => (u.current.modalRef = y.current, u.current.mount = _.current, u.current), N = () => {
       Nd.mount(O(), {
         disableScrollLock: n
       }), y.current && (y.current.scrollTop = 0);
@@ -19146,7 +19146,7 @@ export default theme;`;
       input: {
         ownerState: b
       }
-    }, $ = u ?? i ? Ir(C, u ?? i) : C, T = _.root ?? s.Root ?? kz, O = _.input ?? s.Input ?? Ez;
+    }, $ = u ?? i ? zr(C, u ?? i) : C, T = _.root ?? s.Root ?? kz, O = _.input ?? s.Input ?? Ez;
     return /* @__PURE__ */ R.jsx(Db, {
       slots: {
         root: T,
@@ -20000,7 +20000,7 @@ export default theme;`;
           disableUnderline: o
         }
       }
-    }, C = m ?? i ? Ir(m ?? i, S) : S, $ = u.root ?? s.Root ?? Jz, T = u.input ?? s.Input ?? Yz;
+    }, C = m ?? i ? zr(m ?? i, S) : S, $ = u.root ?? s.Root ?? Jz, T = u.input ?? s.Input ?? Yz;
     return /* @__PURE__ */ R.jsx(Db, {
       slots: {
         root: $,
@@ -21295,7 +21295,7 @@ export default theme;`;
         m && m(T);
         return;
       }
-      const A = Tr(O).activeElement;
+      const A = Or(O).activeElement;
       if (N === "ArrowDown")
         T.preventDefault(), oc(O, A, h, d, Em);
       else if (N === "ArrowUp")
@@ -21430,7 +21430,7 @@ export default theme;`;
     }, k = PF(z), I = E.useCallback(() => {
       if (d === "anchorPosition")
         return c;
-      const Ee = $m(s), Me = (Ee && Ee.nodeType === 1 ? Ee : Tr(j.current).body).getBoundingClientRect();
+      const Ee = $m(s), Me = (Ee && Ee.nodeType === 1 ? Ee : Or(j.current).body).getBoundingClientRect();
       return {
         top: Me.top + WS(Me, i.vertical),
         left: Me.left + HS(Me, i.horizontal)
@@ -21530,7 +21530,7 @@ export default theme;`;
       }
     });
     O === "auto" && !P.muiSupportAuto && (J = void 0);
-    const ie = u || (s ? Tr($m(s)).body : void 0), [se, {
+    const ie = u || (s ? Or($m(s)).body : void 0), [se, {
       slots: de,
       slotProps: fe,
       ...Te
@@ -22774,7 +22774,7 @@ export default theme;`;
     }, [s]), E.useEffect(() => {
       if (!S)
         return;
-      const Se = Tr(se.current).getElementById(S);
+      const Se = Or(se.current).getElementById(S);
       if (Se) {
         const dt = () => {
           getSelection().isCollapsed && se.current.focus();
@@ -23058,7 +23058,7 @@ export default theme;`;
             }
           },
           ...y,
-          classes: y ? Ir(re, y.classes) : re,
+          classes: y ? zr(re, y.classes) : re,
           ..._ ? _.props.inputProps : {}
         },
         ...(C && $ || h) && q === "outlined" ? {
@@ -24942,8 +24942,8 @@ export default theme;`;
       if (typeof fe[ht] != "number" || typeof fe[J] != "number")
         Te(Kt);
       else {
-        const Or = Math.abs(fe[ht] - Kt[ht]), $n = Math.abs(fe[J] - Kt[J]);
-        (Or >= 1 || $n >= 1) && Te(Kt);
+        const Dr = Math.abs(fe[ht] - Kt[ht]), $n = Math.abs(fe[J] - Kt[J]);
+        (Dr >= 1 || $n >= 1) && Te(Kt);
       }
     }), be = (je, {
       animation: Be = !0
@@ -25045,8 +25045,8 @@ export default theme;`;
         we.current && Qe();
       });
       let Be;
-      const gt = (Or) => {
-        Or.forEach(($n) => {
+      const gt = (Dr) => {
+        Dr.forEach(($n) => {
           $n.removedNodes.forEach((lo) => {
             Be?.unobserve(lo);
           }), $n.addedNodes.forEach((lo) => {
@@ -25056,8 +25056,8 @@ export default theme;`;
       }, ht = oo(we.current);
       ht.addEventListener("resize", je);
       let Kt;
-      return typeof ResizeObserver < "u" && (Be = new ResizeObserver(je), Array.from(ze.current.children).forEach((Or) => {
-        Be.observe(Or);
+      return typeof ResizeObserver < "u" && (Be = new ResizeObserver(je), Array.from(ze.current.children).forEach((Dr) => {
+        Be.observe(Dr);
       })), typeof MutationObserver < "u" && (Kt = new MutationObserver(gt), Kt.observe(ze.current, {
         childList: !0
       })), () => {
@@ -25069,9 +25069,9 @@ export default theme;`;
         const gt = je[0], ht = je[Be - 1], Kt = {
           root: we.current,
           threshold: 0.99
-        }, Or = (bl) => {
+        }, Dr = (bl) => {
           De(!bl[0].isIntersecting);
-        }, $n = new IntersectionObserver(Or, Kt);
+        }, $n = new IntersectionObserver(Dr, Kt);
         $n.observe(gt);
         const lo = (bl) => {
           Ie(!bl[0].isIntersecting);
@@ -25121,15 +25121,15 @@ export default theme;`;
         } : {}
       });
     }), io = (je) => {
-      const Be = ze.current, gt = Tr(Be).activeElement;
+      const Be = ze.current, gt = Or(Be).activeElement;
       if (gt.getAttribute("role") !== "tab")
         return;
-      let Kt = S === "horizontal" ? "ArrowLeft" : "ArrowUp", Or = S === "horizontal" ? "ArrowRight" : "ArrowDown";
-      switch (S === "horizontal" && s && (Kt = "ArrowRight", Or = "ArrowLeft"), je.key) {
+      let Kt = S === "horizontal" ? "ArrowLeft" : "ArrowUp", Dr = S === "horizontal" ? "ArrowRight" : "ArrowDown";
+      switch (S === "horizontal" && s && (Kt = "ArrowRight", Dr = "ArrowLeft"), je.key) {
         case Kt:
           je.preventDefault(), Rd(Be, gt, KS);
           break;
-        case Or:
+        case Dr:
           je.preventDefault(), Rd(Be, gt, YS);
           break;
         case "Home":
@@ -25208,7 +25208,7 @@ export default theme;`;
     name: "MuiTextField",
     slot: "Root",
     overridesResolver: (t, e) => e.root
-  })({}), $r = /* @__PURE__ */ E.forwardRef(function(e, r) {
+  })({}), Tr = /* @__PURE__ */ E.forwardRef(function(e, r) {
     const n = qe({
       props: e,
       name: "MuiTextField"
@@ -36992,7 +36992,7 @@ export default theme;`;
           f.createElement(Lt, { key: "everyN", value: "everyN" }, L.t(`sc_everyN_${e}`)),
           f.createElement(Lt, { key: "specific", value: "specific" }, L.t(`sc_specific_${e}`))
         ),
-        s && f.createElement($r, { variant: "standard", key: "interval", label: L.t(`sc_${e}`), value: c, slotProps: {
+        s && f.createElement(Tr, { variant: "standard", key: "interval", label: L.t(`sc_${e}`), value: c, slotProps: {
           htmlInput: {
             min: 1,
             max: r
@@ -37020,7 +37020,7 @@ export default theme;`;
         f.createElement(
           "div",
           { style: { paddingLeft: 8, width: "calc(100% - px)" } },
-          f.createElement($r, { variant: "standard", style: { width: "100%" }, value: this.state.cron, disabled: !0 })
+          f.createElement(Tr, { variant: "standard", style: { width: "100%" }, value: this.state.cron, disabled: !0 })
         ),
         f.createElement(
           "div",
@@ -39222,7 +39222,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         on,
         null,
         f.createElement(wa, null, t.promptText),
-        f.createElement($r, { variant: "standard", autoFocus: !0, margin: "dense", error: !!n, helperText: n === !0 || !n ? "" : n, value: e, label: t.labelText || "", type: t.type || "text", onKeyUp: (s) => s.code === "Enter" && e && t.onClose(e), onChange: (s) => {
+        f.createElement(Tr, { variant: "standard", autoFocus: !0, margin: "dense", error: !!n, helperText: n === !0 || !n ? "" : n, value: e, label: t.labelText || "", type: t.type || "text", onKeyUp: (s) => s.code === "Enter" && e && t.onClose(e), onChange: (s) => {
           let i = "";
           t.verify && (i = !t.verify(s.target.value)), t.rule ? r(t.rule(s.target.value)) : r(s.target.value), o(i);
         }, fullWidth: !0 })
@@ -40164,7 +40164,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       justifyContent: "space-between",
       display: "flex"
     }
-  }, jr = {
+  }, Rr = {
     images: ["png", "jpg", "svg", "jpeg", "bmp", "gif", "apng", "avif", "webp", "ico"],
     code: ["js", "json", "json5", "md"],
     txt: ["log", "txt", "html", "css", "xml", "ics"],
@@ -40193,7 +40193,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           !1
         ),
         editingValue: null,
-        copyPossible: !!r && (jr.code.includes(r) || jr.txt.includes(r)),
+        copyPossible: !!r && (Rr.code.includes(r) || Rr.txt.includes(r)),
         forceUpdate: Date.now(),
         changed: !1,
         imgError: !1
@@ -40221,9 +40221,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }
             } else {
               const c = _e.detectMimeType(C2(s));
-              c && (i.ext = c, i.copyPossible = jr.code.includes(c) || jr.txt.includes(c));
+              c && (i.ext = c, i.copyPossible = Rr.code.includes(c) || Rr.txt.includes(c));
             }
-          i.copyPossible && (i.ext && jr.txt.includes(i.ext) ? (i.text = s, i.editingValue = s) : i.ext && jr.code.includes(i.ext) && (i.code = s, i.editingValue = s)), this.setState(i);
+          i.copyPossible && (i.ext && Rr.txt.includes(i.ext) ? (i.text = s, i.editingValue = s) : i.ext && Rr.code.includes(i.ext) && (i.code = s, i.editingValue = s)), this.setState(i);
         }).catch((o) => window.alert(`Cannot read file: ${o}`));
       }
     }
@@ -40247,7 +40247,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }, 300));
     };
     getEditorOrViewer() {
-      return f.createElement($r, {
+      return f.createElement(Tr, {
         variant: "standard",
         style: la.textarea,
         multiline: !0,
@@ -40261,9 +40261,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       });
     }
     getContent() {
-      return this.state.ext && jr.images.includes(this.state.ext) ? this.state.imgError ? f.createElement(T0, { style: { ...la.img, ...this.props.getStyleBackgroundImage() } }) : f.createElement(va, { onError: (e) => {
+      return this.state.ext && Rr.images.includes(this.state.ext) ? this.state.imgError ? f.createElement(T0, { style: { ...la.img, ...this.props.getStyleBackgroundImage() } }) : f.createElement(va, { onError: (e) => {
         e.target.onerror = null, this.setState({ imgError: !0 });
-      }, style: { ...la.img, ...this.props.getStyleBackgroundImage() }, src: `${this.props.href}?ts=${this.state.forceUpdate}`, alt: this.props.href }) : this.state.ext && jr.audio.includes(this.state.ext) ? f.createElement(
+      }, style: { ...la.img, ...this.props.getStyleBackgroundImage() }, src: `${this.props.href}?ts=${this.state.forceUpdate}`, alt: this.props.href }) : this.state.ext && Rr.audio.includes(this.state.ext) ? f.createElement(
         "div",
         { style: {
           width: "100%",
@@ -40273,7 +40273,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           alignItems: "center"
         } },
         f.createElement("audio", { style: { width: "100%" }, src: this.props.href, controls: !0 })
-      ) : this.state.ext && jr.video.includes(this.state.ext) ? f.createElement(
+      ) : this.state.ext && Rr.video.includes(this.state.ext) ? f.createElement(
         "div",
         { style: {
           width: "100%",
@@ -40303,7 +40303,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           "div",
           { style: la.dialogTitle },
           f.createElement(Vr, { id: "ar_dialog_file_view_title" }, `${this.props.t(this.state.editing ? "Edit" : "View")}: ${this.props.href}`),
-          this.state.ext && jr.images.includes(this.state.ext) && f.createElement(
+          this.state.ext && Rr.images.includes(this.state.ext) && f.createElement(
             "div",
             null,
             f.createElement(
@@ -40940,7 +40940,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       r && r.stopPropagation(), this.lastSelect = Date.now(), this.localStorage.setItem("files.selected", e), this.setState({ selected: e, path: e, pathFocus: !1 }, () => {
         if (this.props.onSelect) {
           const o = _e.getFileExtension(e);
-          (!this.props.filterFiles || o && this.props.filterFiles.includes(o)) && (!this.state.filterByType || o && jr[this.state.filterByType].includes(o)) ? this.props.onSelect(e, !1, !!this.state.folders[e]) : this.props.onSelect("");
+          (!this.props.filterFiles || o && this.props.filterFiles.includes(o)) && (!this.state.filterByType || o && Rr[this.state.filterByType].includes(o)) ? this.props.onSelect(e, !1, !!this.state.folders[e]) : this.props.onSelect("");
         }
         n && n();
       });
@@ -41053,9 +41053,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       return f.createElement(
         nt,
         { component: "div", key: e.id, id: e.id, onDoubleClick: (o) => {
-          o.stopPropagation(), this.props.onSelect ? (!this.props.filterFiles || e.ext && this.props.filterFiles.includes(e.ext)) && (!this.state.filterByType || e.ext && jr[this.state.filterByType].includes(e.ext)) && this.props.onSelect(e.id, !0, !!this.state.folders[e.id]) : this.setState({ viewer: this.imagePrefix + e.id, formatEditFile: n });
+          o.stopPropagation(), this.props.onSelect ? (!this.props.filterFiles || e.ext && this.props.filterFiles.includes(e.ext)) && (!this.state.filterByType || e.ext && Rr[this.state.filterByType].includes(e.ext)) && this.props.onSelect(e.id, !0, !!this.state.folders[e.id]) : this.setState({ viewer: this.imagePrefix + e.id, formatEditFile: n });
         }, onClick: (o) => this.select(e.id, o), style: this.state.viewType === Et ? { marginLeft: r, width: `calc(100% - ${r}px)` } : void 0, className: "browserItem", sx: _e.getStyle(this.props.theme, Ce[`item${this.state.viewType}`], Ce[`itemFile${this.state.viewType}`], this.state.selected === e.id ? Ce.itemSelected : void 0) },
-        n && jr.images.includes(n) ? this.state.fileErrors.includes(e.id) ? f.createElement(T0, { style: {
+        n && Rr.images.includes(n) ? this.state.fileErrors.includes(e.id) ? f.createElement(T0, { style: {
           ...Ce[`itemImage${this.state.viewType}`],
           ...this.getStyleBackgroundImage(),
           ...Ce[`itemNoImage${this.state.viewType}`]
@@ -41070,7 +41070,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         f.createElement(nt, { component: "div", sx: { display: { md: "inline-block", sm: "none" } } }, this.state.viewType === Et && this.props.expertMode && O0.getEditFile(n) ? f.createElement(
           ct,
           { "aria-label": "edit", onClick: (o) => {
-            o.stopPropagation(), this.props.onSelect ? (!this.props.filterFiles || e.ext && this.props.filterFiles.includes(e.ext)) && (!this.state.filterByType || e.ext && jr[this.state.filterByType].includes(e.ext)) && this.props.onSelect(e.id, !0, !!this.state.folders[e.id]) : this.setState({ viewer: this.imagePrefix + e.id, formatEditFile: n });
+            o.stopPropagation(), this.props.onSelect ? (!this.props.filterFiles || e.ext && this.props.filterFiles.includes(e.ext)) && (!this.state.filterByType || e.ext && Rr[this.state.filterByType].includes(e.ext)) && this.props.onSelect(e.id, !0, !!this.state.folders[e.id]) : this.setState({ viewer: this.imagePrefix + e.id, formatEditFile: n });
           }, sx: Ce.itemDeleteButtonTable, size: "large" },
           f.createElement(op, { fontSize: "small" })
         ) : f.createElement(nt, { component: "div", sx: Ce[`itemDeleteButton${this.state.viewType}`] })),
@@ -41093,7 +41093,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         if (this.state.viewType === Wy) {
           const n = [];
           return e && e !== "/" && n.push(this.renderBackFolder()), this.state.folders[e].forEach((o) => {
-            o.folder ? n.push(this.renderFolder(o)) : (!this.props.filterFiles || o.ext && this.props.filterFiles.includes(o.ext)) && (!this.state.filterByType || o.ext && jr[this.state.filterByType].includes(o.ext)) && n.push(this.renderFile(o));
+            o.folder ? n.push(this.renderFolder(o)) : (!this.props.filterFiles || o.ext && this.props.filterFiles.includes(o.ext)) && (!this.state.filterByType || o.ext && Rr[this.state.filterByType].includes(o.ext)) && n.push(this.renderFile(o));
           }), n;
         }
         const r = [];
@@ -41104,7 +41104,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               const i = this.renderItems(n.id);
               Array.isArray(i) ? i.forEach((c) => r.push(c)) : r.push(i);
             }
-          } else (!this.props.filterFiles || n.ext && this.props.filterFiles.includes(n.ext)) && (!this.state.filterByType || n.ext && jr[this.state.filterByType].includes(n.ext)) && r.push(this.renderFile(n));
+          } else (!this.props.filterFiles || n.ext && this.props.filterFiles.includes(n.ext)) && (!this.state.filterByType || n.ext && Rr[this.state.filterByType].includes(n.ext)) && r.push(this.renderFile(n));
         }), r;
       }
       return f.createElement(
@@ -41729,7 +41729,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   function aG(t) {
     return f.createElement(Ns, { container: !0, alignItems: "center" }, t.children);
   }
-  const ki = 24, Lr = 32, iG = 16, cr = 20, qD = (t) => t === "dark" ? "#62ff25" : "#37c400", XD = (t) => t === "dark" ? "#ee56ff" : "#a204b4", lG = (t) => t === "dark" ? "#fff46e" : "#b89101", GD = (t) => "#ff6d69", JD = (t) => "#5773ff", YD = "#ff413c", KD = "#86211f", Fv = "#57ff45", Lv = "#098c04", Bv = "#f3ad11", Wv = "#6c5008", G = {
+  const ki = 24, Br = 32, iG = 16, cr = 20, qD = (t) => t === "dark" ? "#62ff25" : "#37c400", XD = (t) => t === "dark" ? "#ee56ff" : "#a204b4", lG = (t) => t === "dark" ? "#fff46e" : "#b89101", GD = (t) => "#ff6d69", JD = (t) => "#5773ff", YD = "#ff413c", KD = "#86211f", Fv = "#57ff45", Lv = "#098c04", Bv = "#f3ad11", Wv = "#6c5008", G = {
     toolbar: {
       minHeight: 38
       // Theme.toolbar.height,
@@ -41826,8 +41826,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     },
     tableRow: (t) => ({
       pl: 1,
-      height: Lr,
-      lineHeight: `${Lr}px`,
+      height: Br,
+      lineHeight: `${Br}px`,
       verticalAlign: "top",
       userSelect: "none",
       position: "relative",
@@ -41849,10 +41849,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       cursor: "pointer"
     },
     tableRowAlias: {
-      height: Lr + 10
+      height: Br + 10
     },
     tableRowAliasReadWrite: {
-      height: Lr + 22
+      height: Br + 22
     },
     tableRowFocused: (t) => ({
       "&:after": {
@@ -41883,8 +41883,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       },
       "& .iconOwn": {
         display: "block",
-        width: Lr - 4,
-        height: Lr - 4,
+        width: Br - 4,
+        height: Br - 4,
         mt: "2px",
         float: "right"
       },
@@ -41905,15 +41905,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     // This style is used for simple div. Do not migrate it to "secondary.main"
     cellIdIconFolder: (t) => ({
       marginRight: 8,
-      width: Lr - 4,
-      height: Lr - 4,
+      width: Br - 4,
+      height: Br - 4,
       cursor: "pointer",
       color: t.palette.secondary.main || "#fbff7d",
       verticalAlign: "top"
     }),
     cellIdIconDocument: {
       verticalAlign: "middle",
-      marginLeft: (Lr - cr) / 2,
+      marginLeft: (Br - cr) / 2,
       marginRight: 8,
       width: cr,
       height: cr
@@ -41934,7 +41934,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     cellCopyButton: {
       width: cr,
       height: cr,
-      top: (Lr - cr) / 2,
+      top: (Br - cr) / 2,
       opacity: 0.8,
       position: "absolute",
       right: 3
@@ -41942,7 +41942,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     cellCopyButtonInDetails: {
       width: cr,
       height: cr,
-      top: (Lr - cr) / 2,
+      top: (Br - cr) / 2,
       opacity: 0.8
     },
     cellEditButton: {
@@ -41950,7 +41950,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       height: cr,
       color: "white",
       position: "absolute",
-      top: (Lr - cr) / 2,
+      top: (Br - cr) / 2,
       right: cr + 3,
       opacity: 0.7,
       "&:hover": {
@@ -42054,7 +42054,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     },
     cellValueText: {
       width: "100%",
-      height: Lr,
+      height: Br,
       fontSize: 16,
       display: "flex",
       overflow: "hidden",
@@ -42216,7 +42216,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     },
     headerCellInput: {
       width: "calc(100% - 5px)",
-      height: Lr,
+      height: Br,
       pt: 0,
       "& .itemIcon": {
         verticalAlign: "middle",
@@ -43110,7 +43110,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           this.setState({ updating: !0 }, () => d());
         });
         const n = (this.props.objectsWorker ? await this.props.objectsWorker.getObjects(e) : await r.socket.getObjects(e, !0)) || {};
-        if (r.types && Br.isWeb())
+        if (r.types && wr.isWeb())
           for (let d = 0; d < r.types.length; d++) {
             if (r.types[d] === "state" || r.types[d] === "channel" || r.types[d] === "device" || r.types[d] === "enum")
               continue;
@@ -44390,7 +44390,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }, onOpen: () => this.getTooltipInfo(e, () => this.readHistory(e)), onClose: () => this.state.tooltipInfo?.id === e && this.setState({ tooltipInfo: null }) },
         f.createElement(nt, { component: "div", style: i.style, sx: {
           ...G.cellValueText,
-          height: n ? void 0 : Lr,
+          height: n ? void 0 : Br,
           "& .admin-button:active": {
             transform: "translate(0, 2px)"
           }
@@ -44528,7 +44528,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             r.value = e.target.checked.toString();
             const n = r.value !== r.initValue;
             n === !this.state.customColumnDialogValueChanged && this.setState({ customColumnDialogValueChanged: n });
-          } }), label: `${this.state.columnsEditCustomDialog.it.name} (${this.state.columnsEditCustomDialog.it.pathText})` }) : f.createElement($r, { variant: "standard", defaultValue: this.customColumnDialog.value, fullWidth: !0, onKeyUp: (e) => e.key === "Enter" && this.onColumnsEditCustomDialogClose(!0), label: `${this.state.columnsEditCustomDialog.it.name} (${this.state.columnsEditCustomDialog.it.pathText})`, onChange: (e) => {
+          } }), label: `${this.state.columnsEditCustomDialog.it.name} (${this.state.columnsEditCustomDialog.it.pathText})` }) : f.createElement(Tr, { variant: "standard", defaultValue: this.customColumnDialog.value, fullWidth: !0, onKeyUp: (e) => e.key === "Enter" && this.onColumnsEditCustomDialogClose(!0), label: `${this.state.columnsEditCustomDialog.it.name} (${this.state.columnsEditCustomDialog.it.pathText})`, onChange: (e) => {
             const r = this.customColumnDialog;
             r.value = e.target.value;
             const n = r.value !== r.initValue;
@@ -45894,7 +45894,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     const e = t.split(".");
     return e.length === 3 ? `${e[2]}-${e[1]}-${e[0]}` : "";
   }
-  class Cr extends E.Component {
+  class kr extends E.Component {
     refFrom;
     refTo;
     refOnce;
@@ -45910,15 +45910,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         } catch {
         }
       else typeof this.props.schedule == "object" && (r = this.props.schedule);
-      (!r || !Object.keys(r).length) && (setTimeout(() => this.onChange(this.state.schedule, !0), 200), r = P2), r = { ...P2, ...r }, r.valid.from = r.valid.from || Cr.now2string(), this.refFrom = f.createRef(), this.refTo = f.createRef(), this.refOnce = f.createRef(), this.state = {
+      (!r || !Object.keys(r).length) && (setTimeout(() => this.onChange(this.state.schedule, !0), 200), r = P2), r = { ...P2, ...r }, r.valid.from = r.valid.from || kr.now2string(), this.refFrom = f.createRef(), this.refTo = f.createRef(), this.refOnce = f.createRef(), this.state = {
         schedule: r,
-        desc: Cr.state2text(r)
+        desc: kr.state2text(r)
       }, JSON.stringify(r) !== this.props.schedule && setTimeout(() => this.props.onChange && this.props.onChange(JSON.stringify(r)), 100);
     }
     onChange(e, r) {
       const n = JSON.stringify(e) !== JSON.stringify(this.state.schedule);
       if (r || n) {
-        n && this.setState({ schedule: e, desc: Cr.state2text(e) });
+        n && this.setState({ schedule: e, desc: kr.state2text(e) });
         const o = JSON.parse(JSON.stringify(e));
         if (o.period.once) {
           const s = o.period.once;
@@ -45938,12 +45938,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
         if (o.time.exactTime ? (delete o.time.end, delete o.time.mode, delete o.time.interval) : delete o.time.exactTime, o.valid) {
           if (o.valid.to || delete o.valid.to, o.period.days === 1 || o.period.weeks === 1 || o.period.months === 1 || o.period.years === 1) {
-            const s = Cr.string2date(o.valid.from), i = /* @__PURE__ */ new Date();
+            const s = kr.string2date(o.valid.from), i = /* @__PURE__ */ new Date();
             i.setHours(0), i.setMinutes(0), i.setSeconds(0), i.setMilliseconds(0), s <= i && delete o.valid.from;
           }
           !o.valid.from && !o.valid.to && delete o.valid;
         }
-        this.props.onChange && this.props.onChange(JSON.stringify(o), Cr.state2text(e));
+        this.props.onChange && this.props.onChange(JSON.stringify(o), kr.state2text(e));
       }
     }
     static state2text(e) {
@@ -45953,9 +45953,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         } catch {
           return "";
         }
-      const r = [], n = Cr.string2date(e.valid.from);
+      const r = [], n = kr.string2date(e.valid.from);
       if (e.period.once) {
-        const o = Cr.string2date(e.period.once), s = /* @__PURE__ */ new Date();
+        const o = kr.string2date(e.period.once), s = /* @__PURE__ */ new Date();
         if (s.setMilliseconds(0), s.setSeconds(0), s.setMinutes(0), s.setHours(0), o < s)
           return L.t("sch_desc_onceInPast");
         r.push(L.t("sch_desc_once_on", e.period.once));
@@ -46074,7 +46074,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   i.time.start = "00:00", i.time.end = "23:59", this.onChange(i);
                 } }), label: s ? "" : L.t("sch_fromTo") }),
                 s && [
-                  f.createElement($r, {
+                  f.createElement(Tr, {
                     variant: "standard",
                     style: { ...he.inputTime, marginRight: 10 },
                     key: "exactTimeFrom",
@@ -46096,7 +46096,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     label: L.t("sch_from"),
                     margin: "normal"
                   }),
-                  f.createElement($r, {
+                  f.createElement(Tr, {
                     variant: "standard",
                     style: he.inputTime,
                     key: "exactTimeTo",
@@ -46175,7 +46175,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         this.state.schedule.time.exactTime && !e && f.createElement(
           "div",
           { style: he.settingsDiv },
-          f.createElement($r, { variant: "standard", style: he.inputTime, key: "exactTimeValue", value: this.state.schedule.time.start, type: "time", sx: (r) => ({
+          f.createElement(Tr, { variant: "standard", style: he.inputTime, key: "exactTimeValue", value: this.state.schedule.time.start, type: "time", sx: (r) => ({
             '& input[type="time"]::-webkit-calendar-picker-indicator': {
               filter: r.palette.mode === "dark" ? "invert(80%)" : void 0
             }
@@ -46193,7 +46193,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }
     getPeriodModes() {
       const e = this.state.schedule, r = !e.period.dows && !e.period.months && !e.period.dates && !e.period.years && !e.period.days && !e.period.weeks;
-      return r && !e.period.once && (e.period.once = Cr.now2string(!0)), [
+      return r && !e.period.once && (e.period.once = kr.now2string(!0)), [
         // ----- once ---
         f.createElement(
           "div",
@@ -46203,13 +46203,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             { style: he.modeDiv },
             f.createElement(ot, { control: f.createElement(Rt, { style: he.inputRadio, checked: !!r, onClick: () => {
               const n = JSON.parse(JSON.stringify(this.state.schedule));
-              n.period.once = n.period.once || Cr.now2string(!0), n.period.dows = "", n.period.months = "", n.period.dates = "", n.period.years = 0, n.period.yearDate = 0, n.period.yearMonth = 0, n.period.weeks = 0, n.period.days = 0, this.onChange(n);
+              n.period.once = n.period.once || kr.now2string(!0), n.period.dows = "", n.period.months = "", n.period.dates = "", n.period.years = 0, n.period.yearDate = 0, n.period.yearMonth = 0, n.period.weeks = 0, n.period.days = 0, this.onChange(n);
             } }), label: L.t("sch_periodOnce") })
           ),
           r && f.createElement(
             "div",
             { style: he.settingsDiv },
-            f.createElement($r, {
+            f.createElement(Tr, {
               variant: "standard",
               style: he.inputDate,
               type: "date",
@@ -46220,7 +46220,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               onChange: (n) => {
                 this.timerOnce && clearTimeout(this.timerOnce), this.timerOnce = null, this.refOnce.current && (this.refOnce.current.style.background = "#ff000030"), this.timerOnce = setTimeout((o) => {
                   this.timerOnce = null, this.refOnce.current && (this.refOnce.current.style.background = "");
-                  const s = JSON.parse(JSON.stringify(this.state.schedule)), i = Cr.string2date(o);
+                  const s = JSON.parse(JSON.stringify(this.state.schedule)), i = kr.string2date(o);
                   i.toString() !== "Invalid Date" && (s.period.once = `${Xo(i.getDate())}.${Xo(i.getMonth() + 1)}.${i.getFullYear()}`, this.onChange(s));
                 }, 1500, n.target.value);
               },
@@ -46655,7 +46655,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         f.createElement(
           "div",
           { style: he.settingsDiv },
-          f.createElement($r, {
+          f.createElement(Tr, {
             variant: "standard",
             style: { ...he.inputDate, marginRight: 10 },
             key: "exactTimeFrom",
@@ -46666,7 +46666,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             onChange: (r) => {
               this.timerFrom && clearTimeout(this.timerFrom), this.refFrom.current && (this.refFrom.current.style.background = "#ff000030"), this.timerFrom = setTimeout((n) => {
                 this.timerFrom = null, this.refFrom.current && (this.refFrom.current.style.background = "");
-                const o = JSON.parse(JSON.stringify(this.state.schedule)), s = Cr.string2date(n);
+                const o = JSON.parse(JSON.stringify(this.state.schedule)), s = kr.string2date(n);
                 s.toString() !== "Invalid Date" && (o.valid.from = `${Xo(s.getDate())}.${Xo(s.getMonth() + 1)}.${s.getFullYear()}`, this.onChange(o));
               }, 1500, r.target.value);
             },
@@ -46677,9 +46677,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           f.createElement(ot, { control: f.createElement(Ut, { style: he.inputRadio, checked: !!e.valid.to, onClick: () => {
             const r = JSON.parse(JSON.stringify(this.state.schedule));
-            r.valid.to = r.valid.to ? "" : Cr.now2string(!0), this.onChange(r);
+            r.valid.to = r.valid.to ? "" : kr.now2string(!0), this.onChange(r);
           } }), label: L.t("sch_validTo") }),
-          !!e.valid.to && f.createElement($r, {
+          !!e.valid.to && f.createElement(Tr, {
             variant: "standard",
             inputRef: this.refTo,
             style: { ...he.inputDate, marginRight: 10 },
@@ -46690,7 +46690,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             onChange: (r) => {
               this.timerTo && clearTimeout(this.timerTo), this.refTo.current && (this.refTo.current.style.background = "#ff000030"), this.timerTo = setTimeout((n) => {
                 this.timerTo = null, this.refTo.current && (this.refTo.current.style.background = "");
-                const o = JSON.parse(JSON.stringify(this.state.schedule)), s = Cr.string2date(n);
+                const o = JSON.parse(JSON.stringify(this.state.schedule)), s = kr.string2date(n);
                 s.toString() !== "Invalid Date" && (o.valid.to = `${Xo(s.getDate())}.${Xo(s.getMonth() + 1)}.${s.getFullYear()}`, this.onChange(o));
               }, 1500, r.target.value);
             },
@@ -46713,10 +46713,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           f.createElement("h5", null, L.t("sch_time")),
           this.getTimePeriodElements(),
           this.getTimeExactElements(),
-          Cr.getDivider(),
+          kr.getDivider(),
           f.createElement("h5", null, L.t("sch_period")),
           this.getPeriodModes(),
-          !this.state.schedule.period.once && Cr.getDivider(),
+          !this.state.schedule.period.once && kr.getDivider(),
           !this.state.schedule.period.once && this.getValidSettings()
         )
       );
@@ -47092,11 +47092,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   function FG(t, e) {
     return t.classList ? t.classList.contains(e) : t.className.indexOf(e) > -1;
   }
-  function wr(t, e) {
+  function xr(t, e) {
     if (e) {
       if (mt(t.length)) {
         dr(t, function(n) {
-          wr(n, e);
+          xr(n, e);
         });
         return;
       }
@@ -47131,7 +47131,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         });
         return;
       }
-      r ? wr(t, e) : To(t, e);
+      r ? xr(t, e) : To(t, e);
     }
   }
   var LG = /([a-z\d])([A-Z])/g;
@@ -47417,7 +47417,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     },
     initContainer: function() {
       var e = this.element, r = this.options, n = this.container, o = this.cropper, s = Number(r.minContainerWidth), i = Number(r.minContainerHeight);
-      wr(o, rn), To(e, rn);
+      xr(o, rn), To(e, rn);
       var c = {
         width: Math.max(n.offsetWidth, s >= 0 ? s : dM),
         height: Math.max(n.offsetHeight, i >= 0 ? i : pM)
@@ -47425,7 +47425,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       this.containerData = c, js(o, {
         width: c.width,
         height: c.height
-      }), wr(e, rn), To(o, rn);
+      }), xr(e, rn), To(o, rn);
     },
     // Canvas (image wrapper)
     initCanvas: function() {
@@ -47614,7 +47614,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }) : s[e.pointerId || 0] = Yd(e), Object.keys(s).length > 1 && o.zoomable && o.zoomOnTouch ? i = lM : i = eb(e.target, Zc), OG.test(i) && nl(this.element, Zv, {
           originalEvent: e,
           action: i
-        }) !== !1 && (e.preventDefault(), this.action = i, this.cropping = !1, i === aM && (this.cropping = !0, wr(this.dragBox, Pp)));
+        }) !== !1 && (e.preventDefault(), this.action = i, this.cropping = !1, i === aM && (this.cropping = !0, xr(this.dragBox, Pp)));
       }
     },
     cropMove: function(e) {
@@ -47765,7 +47765,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   }, oJ = {
     // Show the crop box manually
     crop: function() {
-      return this.ready && !this.cropped && !this.disabled && (this.cropped = !0, this.limitCropBox(!0, !0), this.options.modal && wr(this.dragBox, Pp), To(this.cropBox, rn), this.setCropBoxData(this.initialCropBoxData)), this;
+      return this.ready && !this.cropped && !this.disabled && (this.cropped = !0, this.limitCropBox(!0, !0), this.options.modal && xr(this.dragBox, Pp), To(this.cropBox, rn), this.setCropBoxData(this.initialCropBoxData)), this;
     },
     // Reset the image and crop box to their initial states
     reset: function() {
@@ -47778,7 +47778,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         top: 0,
         width: 0,
         height: 0
-      }), this.cropped = !1, this.renderCropBox(), this.limitCanvas(!0, !0), this.renderCanvas(), To(this.dragBox, Pp), wr(this.cropBox, rn)), this;
+      }), this.cropped = !1, this.renderCropBox(), this.limitCanvas(!0, !0), this.renderCanvas(), To(this.dragBox, Pp), xr(this.cropBox, rn)), this;
     },
     /**
      * Replace the image's src and rebuild the cropper
@@ -47798,7 +47798,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     },
     // Disable (freeze) the cropper
     disable: function() {
-      return this.ready && !this.disabled && (this.disabled = !0, wr(this.cropper, I2)), this;
+      return this.ready && !this.disabled && (this.disabled = !0, xr(this.cropper, I2)), this;
     },
     /**
      * Destroy the cropper and remove the instance from the image
@@ -48137,7 +48137,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         var r = this.element, n = this.url, o = r.crossOrigin, s = n;
         this.options.checkCrossOrigin && J2(n) && (o || (o = "anonymous"), s = Y2(n)), this.crossOrigin = o, this.crossOriginUrl = s;
         var i = document.createElement("img");
-        o && (i.crossOrigin = o), i.src = s || n, i.alt = r.alt || "The image to crop", this.image = i, i.onload = this.start.bind(this), i.onerror = this.stop.bind(this), wr(i, z2), r.parentNode.insertBefore(i, r.nextSibling);
+        o && (i.crossOrigin = o), i.src = s || n, i.alt = r.alt || "The image to crop", this.image = i, i.onload = this.start.bind(this), i.onerror = this.stop.bind(this), xr(i, z2), r.parentNode.insertBefore(i, r.nextSibling);
       }
     }, {
       key: "start",
@@ -48173,7 +48173,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           var r = this.element, n = this.options, o = this.image, s = r.parentNode, i = document.createElement("div");
           i.innerHTML = AG;
           var c = i.querySelector(".".concat(Vt, "-container")), d = c.querySelector(".".concat(Vt, "-canvas")), h = c.querySelector(".".concat(Vt, "-drag-box")), m = c.querySelector(".".concat(Vt, "-crop-box")), u = m.querySelector(".".concat(Vt, "-face"));
-          this.container = s, this.cropper = c, this.canvas = d, this.dragBox = h, this.cropBox = m, this.viewBox = c.querySelector(".".concat(Vt, "-view-box")), this.face = u, d.appendChild(o), wr(r, rn), s.insertBefore(c, r.nextSibling), To(o, z2), this.initPreview(), this.bind(), n.initialAspectRatio = Math.max(0, n.initialAspectRatio) || NaN, n.aspectRatio = Math.max(0, n.aspectRatio) || NaN, n.viewMode = Math.max(0, Math.min(3, Math.round(n.viewMode))) || 0, wr(m, rn), n.guides || wr(m.getElementsByClassName("".concat(Vt, "-dashed")), rn), n.center || wr(m.getElementsByClassName("".concat(Vt, "-center")), rn), n.background && wr(c, "".concat(Vt, "-bg")), n.highlight || wr(u, kG), n.cropBoxMovable && (wr(u, Gv), Qc(u, Zc, N0)), n.cropBoxResizable || (wr(m.getElementsByClassName("".concat(Vt, "-line")), rn), wr(m.getElementsByClassName("".concat(Vt, "-point")), rn)), this.render(), this.ready = !0, this.setDragMode(n.dragMode), n.autoCrop && this.crop(), this.setData(n.data), tn(n.ready) && jn(r, H2, n.ready, {
+          this.container = s, this.cropper = c, this.canvas = d, this.dragBox = h, this.cropBox = m, this.viewBox = c.querySelector(".".concat(Vt, "-view-box")), this.face = u, d.appendChild(o), xr(r, rn), s.insertBefore(c, r.nextSibling), To(o, z2), this.initPreview(), this.bind(), n.initialAspectRatio = Math.max(0, n.initialAspectRatio) || NaN, n.aspectRatio = Math.max(0, n.aspectRatio) || NaN, n.viewMode = Math.max(0, Math.min(3, Math.round(n.viewMode))) || 0, xr(m, rn), n.guides || xr(m.getElementsByClassName("".concat(Vt, "-dashed")), rn), n.center || xr(m.getElementsByClassName("".concat(Vt, "-center")), rn), n.background && xr(c, "".concat(Vt, "-bg")), n.highlight || xr(u, kG), n.cropBoxMovable && (xr(u, Gv), Qc(u, Zc, N0)), n.cropBoxResizable || (xr(m.getElementsByClassName("".concat(Vt, "-line")), rn), xr(m.getElementsByClassName("".concat(Vt, "-point")), rn)), this.render(), this.ready = !0, this.setDragMode(n.dragMode), n.autoCrop && this.crop(), this.setData(n.data), tn(n.ready) && jn(r, H2, n.ready, {
             once: !0
           }), nl(r, H2);
         }
@@ -48287,7 +48287,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }
   }, lJ = {
     once: "once"
-  }, Rr = {
+  }, Ir = {
     seconds: "seconds",
     minutes: "minutes"
     // hours: 'hours',
@@ -48308,7 +48308,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     mode: "interval",
     interval: {
       period: 1,
-      unit: Rr.minutes
+      unit: Ir.minutes
     }
   };
   function ip(t) {
@@ -48350,31 +48350,31 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       mode: "interval",
       interval: {
         period: 1,
-        unit: Rr.minutes
+        unit: Ir.minutes
       }
     }), n.seconds === "*" && n.minutes === "*" && n.hours === "*" && n.date === "*" && n.months === "*" && (n.dow === "*" || e) ? o = {
       mode: "interval",
       interval: {
         period: 1,
-        unit: Rr.seconds
+        unit: Ir.seconds
       }
     } : n.seconds === null && n.minutes.includes("/") && n.hours === "*" && n.date === "*" && n.months === "*" && (n.dow === "*" || e) ? o = {
       mode: "interval",
       interval: {
         period: parseInt(n.minutes.split("/")[1], 10),
-        unit: Rr.minutes
+        unit: Ir.minutes
       }
     } : n.seconds !== null && n.seconds.includes("/") && n.minutes === "*" && n.hours === "*" && n.date === "*" && n.months === "*" && (n.dow === "*" || e) ? o = {
       mode: "interval",
       interval: {
         period: parseInt(n.seconds.split("/")[1], 10),
-        unit: Rr.seconds
+        unit: Ir.seconds
       }
     } : n.seconds !== null && n.seconds.includes("/") && n.minutes === "*" && n.hours.includes("-") && n.date === "*" && n.months === "*" && (n.dow === "*" || e) ? o = {
       mode: "intervalBetween",
       intervalBetween: {
         period: parseInt(n.seconds.split("/")[1], 10),
-        unit: Rr.seconds,
+        unit: Ir.seconds,
         timeFrom: parseInt(n.hours.split("-")[0], 10),
         timeTo: parseInt(n.hours.split("-")[1], 10),
         weekdays: ip(n.dow)
@@ -48383,7 +48383,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       mode: "intervalBetween",
       intervalBetween: {
         period: parseInt(n.minutes.split("/")[1], 10),
-        unit: Rr.minutes,
+        unit: Ir.minutes,
         timeFrom: parseInt(n.hours.split("-")[0], 10),
         timeTo: parseInt(n.hours.split("-")[1], 10),
         weekdays: ip(n.dow)
@@ -48418,11 +48418,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         },
         interval: {
           period: 1,
-          unit: Rr.minutes
+          unit: Ir.minutes
         },
         intervalBetween: {
           period: 1,
-          unit: Rr.minutes,
+          unit: Ir.minutes,
           timeFrom: 0,
           timeTo: 23,
           weekdays: [0, 1, 2, 3, 4, 5, 6]
@@ -48452,33 +48452,33 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       if (e.mode === "interval") {
         const n = e.interval || {
           period: 1,
-          unit: Rr.minutes
+          unit: Ir.minutes
         };
         if (n.period !== void 0 && n.period > 60 && (n.period = 60), n.period !== void 0 && n.period < 1 && (n.period = 1), n.minutes !== void 0 && n.minutes !== null && n.minutes > 60 && (n.minutes = 60), n.minutes !== void 0 && n.minutes !== null && n.minutes < 1 && (n.minutes = 1), n.hours !== void 0 && n.hours !== null && n.hours > 24 && (n.hours = 24), n.hours !== void 0 && n.hours !== null && n.hours < 1 && (n.hours = 1), e.extended)
           r = `${n.minutes !== void 0 && n.minutes !== null && n.minutes > 1 ? `*/${n.minutes}` : "*"} ${n.hours !== void 0 && n.hours !== null && n.hours > 1 ? `*/${n.hours}` : "*"} * * *`;
         else
           switch (n.unit) {
-            case Rr.seconds:
+            case Ir.seconds:
               r = `${n.period > 1 ? `*/${n.period}` : "*"} * * * * *`;
               break;
-            case Rr.minutes:
+            case Ir.minutes:
               r = `${n.period > 1 ? `*/${n.period}` : "*"} * * * *`;
               break;
           }
       } else if (e.mode === "intervalBetween") {
         const n = e.intervalBetween || {
           period: 1,
-          unit: Rr.minutes,
+          unit: Ir.minutes,
           timeFrom: 0,
           timeTo: 24,
           weekdays: [0, 1, 2, 3, 4, 5, 6]
         };
         let o;
-        switch (n.timeFrom = n.timeFrom || 0, n.timeTo = n.timeTo === void 0 ? 24 : n.timeTo, n.timeFrom !== 0 && n.timeTo === 24 && (n.timeTo = 23), n.timeFrom === 0 && n.timeTo === 24 ? o = "*" : o = n.timeFrom !== n.timeTo ? `${n.timeFrom}-${n.timeTo}` : "*", n.period > 60 && (n.period = 60), n.period < 1 && (n.period = 1), n.unit = n.unit || Rr.minutes, n.unit) {
-          case Rr.seconds:
+        switch (n.timeFrom = n.timeFrom || 0, n.timeTo = n.timeTo === void 0 ? 24 : n.timeTo, n.timeFrom !== 0 && n.timeTo === 24 && (n.timeTo = 23), n.timeFrom === 0 && n.timeTo === 24 ? o = "*" : o = n.timeFrom !== n.timeTo ? `${n.timeFrom}-${n.timeTo}` : "*", n.period > 60 && (n.period = 60), n.period < 1 && (n.period = 1), n.unit = n.unit || Ir.minutes, n.unit) {
+          case Ir.seconds:
             r = `${n.period > 1 ? `*/${n.period}` : "*"} * ${o} * * ${this.periodArray2text(n.weekdays)}`;
             break;
-          case Rr.minutes:
+          case Ir.minutes:
             r = `${n.period > 1 ? `*/${n.period}` : "*"} ${o} * * ${this.periodArray2text(n.weekdays)}`;
             break;
         }
@@ -48530,7 +48530,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         "div",
         { key: "period", style: { paddingLeft: 8, display: "inline-block" } },
         f.createElement("h5", { style: { marginBottom: 5 } }, L.t("sc_period")),
-        f.createElement($r, { variant: "standard", style: { marginTop: 0, marginBottom: 0, verticalAlign: "bottom" }, key: "value", label: L.t("sc_minutes"), value: r.minutes, onChange: (n) => {
+        f.createElement(Tr, { variant: "standard", style: { marginTop: 0, marginBottom: 0, verticalAlign: "bottom" }, key: "value", label: L.t("sc_minutes"), value: r.minutes, onChange: (n) => {
           const o = JSON.parse(JSON.stringify(this.state[e]));
           o.minutes = parseInt(n.target.value, 10), o.minutes < 1 && (o.minutes = 1), e === "interval" ? this.setState({ interval: o }, () => this.recalcCron()) : this.setState({ intervalBetween: o }, () => this.recalcCron());
         }, slotProps: {
@@ -48542,7 +48542,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             shrink: !0
           }
         }, type: "number", margin: "normal" }),
-        f.createElement($r, { variant: "standard", style: { marginTop: 0, marginBottom: 0, verticalAlign: "bottom" }, key: "value", label: L.t("sc_hours"), value: r.hours, onChange: (n) => {
+        f.createElement(Tr, { variant: "standard", style: { marginTop: 0, marginBottom: 0, verticalAlign: "bottom" }, key: "value", label: L.t("sc_hours"), value: r.hours, onChange: (n) => {
           const o = JSON.parse(JSON.stringify(this.state[e]));
           o.hours = parseInt(n.target.value, 10), o.hours < 1 && (o.hours = 1), e === "interval" ? this.setState({ interval: o }, () => this.recalcCron()) : this.setState({ intervalBetween: o }, () => this.recalcCron());
         }, slotProps: {
@@ -48558,7 +48558,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         "div",
         { key: "period", style: { paddingLeft: 8, display: "inline-block" } },
         f.createElement("h5", { style: { marginBottom: 5 } }, L.t("sc_period")),
-        f.createElement($r, { variant: "standard", style: { marginTop: 0, marginBottom: 0, verticalAlign: "bottom" }, key: "value", label: L.t("sc_every"), value: r.period, onChange: (n) => {
+        f.createElement(Tr, { variant: "standard", style: { marginTop: 0, marginBottom: 0, verticalAlign: "bottom" }, key: "value", label: L.t("sc_every"), value: r.period, onChange: (n) => {
           const o = JSON.parse(JSON.stringify(this.state[e]));
           o.period = parseInt(n.target.value, 10), o.period < 1 && (o.period = 1), e === "interval" ? this.setState({ interval: o }, () => this.recalcCron()) : this.setState({ intervalBetween: o }, () => this.recalcCron());
         }, slotProps: {
@@ -48591,7 +48591,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           ...Ts.formControl,
           "&.MuiFormControl-root": Ts.formControlMarginRight
         } },
-        f.createElement($r, { variant: "standard", key: "at", label: L.t("sc_time"), value: r.time, type: "time", sx: (n) => ({
+        f.createElement(Tr, { variant: "standard", key: "at", label: L.t("sc_time"), value: r.time, type: "time", sx: (n) => ({
           '& input[type="time"]::-webkit-calendar-picker-indicator': {
             filter: n.palette.mode === "dark" ? "invert(80%)" : void 0
           }
@@ -48614,7 +48614,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       return f.createElement(
         fa,
         { variant: "standard", style: Ts.formControl },
-        f.createElement($r, { variant: "standard", key: "date", label: L.t("sc_date"), value: e.date, type: "text", slotProps: {
+        f.createElement(Tr, { variant: "standard", key: "date", label: L.t("sc_date"), value: e.date, type: "text", slotProps: {
           htmlInput: {
             style: Ts.formControlPaddingTop
           },
@@ -48692,7 +48692,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         f.createElement(
           "div",
           { style: { paddingLeft: 8, width: "calc(100% - 8px)" } },
-          f.createElement($r, { variant: "standard", style: { width: "100%" }, value: this.state.cron, disabled: !0, error: this.state.cron.includes("_") })
+          f.createElement(Tr, { variant: "standard", style: { width: "100%" }, value: this.state.cron, disabled: !0, error: this.state.cron.includes("_") })
         ),
         f.createElement("div", { style: { paddingLeft: 8, width: "calc(100% - 8px)", height: 60 } }, this.state.cron.includes("_") ? L.t("sc_invalid_cron") : OD(this.state.cron, this.props.language || "en")),
         f.createElement(
@@ -48835,7 +48835,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             )
           ) : null,
           this.state.mode === "simple" && f.createElement(eu, { cronExpression: this.state.cron, onChange: (e) => this.setState({ cron: e }), language: L.getLanguage() }),
-          this.state.mode === "wizard" && f.createElement(Cr, { theme: this.props.theme, schedule: this.state.cron, onChange: (e) => this.setState({ cron: e }) }),
+          this.state.mode === "wizard" && f.createElement(kr, { theme: this.props.theme, schedule: this.state.cron, onChange: (e) => this.setState({ cron: e }) }),
           this.state.mode === "complex" && f.createElement(Ps, { cronExpression: this.state.cron, onChange: (e) => this.setState({ cron: e }), language: L.getLanguage() })
         ),
         f.createElement(
@@ -54085,12 +54085,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       const [n, o] = window.socketUrl.split("/")[2].split(":");
       t.port = o || 80, t.host = n;
     }
-    return Kd = new Br({
+    return Kd = new wr({
       ...t,
       protocol: t.protocol || window.location.protocol,
       host: t.host || window.location.hostname,
       port: t.port || 8081,
       name: "select-web-component",
+      // @ts-expect-error
+      token: t.token,
       onProgress: (n) => {
         n === xo.CONNECTING ? e(!1) : (xo.READY, e(!0));
       },
@@ -54112,17 +54114,27 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         socket: null,
         opened: !!e.open,
         connected: !1,
-        all: e.all || "false"
+        all: e.all || "false",
+        token: e.token || null
       }, L.setLanguage(this.props.language || "en");
     }
     iobOnPropertyChanged = (e, r) => {
       if (console.log(`New value ${e}, ${r}`), e === "open") {
         const n = r === !0 || r === "true";
         n !== this.state.opened && (n && (this.closeCalled = !1), this.setState({ opened: n }));
-      } else e === "selected" && r !== this.state.selected ? this.setState({ selected: r }) : e === "all" && r !== this.state.all && this.setState({ all: r });
+      } else if (e === "selected" && r !== this.state.selected)
+        this.setState({ selected: r });
+      else if (e === "all" && r !== this.state.all)
+        this.setState({ all: r });
+      else if (e === "token" && r !== JSON.stringify(this.state.token)) {
+        const n = r ? JSON.parse(r) : null, o = this.state.token;
+        this.setState({ token: r ? JSON.parse(r) : null }, () => {
+          n ? wr.saveTokensStatic(n, !1) : o && wr.deleteTokensStatic();
+        });
+      }
     };
     componentDidMount() {
-      window._iobOnPropertyChanged = this.iobOnPropertyChanged, this.setState({
+      window._iobOnPropertyChanged = this.iobOnPropertyChanged, this.props.token && wr.saveTokensStatic(this.props.token, !1), this.setState({
         socket: oWe(
           {
             port: this.props.port,
