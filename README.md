@@ -51,11 +51,13 @@ function openSelectIdDialog(selected, cb, allowAll) {
         window._iobSelectDialog.setAttribute('paper', 'rgb(243, 243, 243)');
         window._iobSelectDialog.setAttribute('all', allowAll ? 'true' : 'false');
         window._iobSelectDialog.setAttribute('selected', selected || '');
+        window._iobSelectDialog.setAttribute('token', token || '');
         window._iobSelectDialog.setAttribute('open', 'true');
         document.body.appendChild(window._iobSelectDialog);
     } else {
         window._iobSelectDialog.setAttribute('all', allowAll ? 'true' : 'false');
         window._iobSelectDialog.setAttribute('selected', selected || '');
+        window._iobSelectDialog.setAttribute('token', token || '');
         window._iobSelectDialog.setAttribute('open', 'true');
     }
 }
@@ -74,6 +76,7 @@ Or static:
     onclose="_iobOnSelected"
     all="true"
     selected="system.adapter.admin.0"
+    token="{\"access_token\":\"AAA\"}" // optional
     open="true"
 ></iobroker-select-id>
 ```
@@ -91,7 +94,8 @@ and provides a promise to open the UI:
       selected: '',
       primary: '#AD1625',
       secondary: 'rgb(228, 145, 145)',
-      paper: 'rgb(243, 243, 243)'
+      paper: 'rgb(243, 243, 243)',
+      token: '{ "access_token": "AAA" }', // optional
   });
 ```
 
@@ -99,6 +103,9 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (@GermanBluefox) Allowed authentication with token
+
 ### 1.0.4 (2025-03-23)
 - (@GermanBluefox) Updated packages
 

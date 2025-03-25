@@ -11,6 +11,8 @@ import {
     I18n,
 } from '@iobroker/adapter-react-v5';
 
+import type { OAuth2Response } from '@iobroker/socket-client';
+
 import langEn from '@iobroker/adapter-react-v5/i18n/en.json';
 import langDe from '@iobroker/adapter-react-v5/i18n/de.json';
 import langRu from '@iobroker/adapter-react-v5/i18n/ru.json';
@@ -79,6 +81,8 @@ function singletonConnection(props: ConnectionProps, onConnectionChanged: (conne
         host: props.host || window.location.hostname,
         port: props.port || 8081,
         name: 'select-web-component',
+        // @ts-expect-error
+        token: props.token,
         onProgress: (progress: PROGRESS) => {
             if (progress === PROGRESS.CONNECTING) {
                 onConnectionChanged(false);
@@ -94,12 +98,14 @@ function singletonConnection(props: ConnectionProps, onConnectionChanged: (conne
             // ignore
         },
     });
+
     return connection;
 }
 
 export interface ISelectIDWebComponentProps {
     port?: number | string;
     protocol?: 'http:' | 'https:';
+    token?: OAuth2Response;
     host?: string;
     selected?: string;
     onclose: OnClose | string;
@@ -119,6 +125,7 @@ interface SelectIDWebComponentState {
     selected: string;
     opened: boolean;
     all: 'true' | 'false';
+    token: OAuth2Response | null;
 }
 
 export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, SelectIDWebComponentState> {
@@ -146,6 +153,7 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
             opened: !!props.open,
             connected: false,
             all: props.all || 'false',
+            token: props.token || null,
         };
         I18n.setLanguage(this.props.language || 'en');
     }
@@ -164,11 +172,25 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
             this.setState({ selected: value as string });
         } else if (attr === 'all' && value !== this.state.all) {
             this.setState({ all: value as 'true' | 'false' });
+        } else if (attr === 'token' && value !== JSON.stringify(this.state.token)) {
+            const token = value ? JSON.parse(value as string) as OAuth2Response : null;
+            const oldToken = this.state.token;
+            this.setState({ token: value ? JSON.parse(value as string) as OAuth2Response : null }, () => {
+                if (token) {
+                    Connection.saveTokensStatic(token, false);
+                } else if (oldToken) {
+                    Connection.deleteTokensStatic();
+                }
+            });
         }
     };
 
     componentDidMount(): void {
         (window as any)._iobOnPropertyChanged = this.iobOnPropertyChanged;
+        if (this.props.token) {
+            Connection.saveTokensStatic(this.props.token, false);
+        }
+
         this.setState({
             socket: singletonConnection(
                 {
