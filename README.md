@@ -103,7 +103,7 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
-### 1.0.5 (2025-03-25)
+### **WORK IN PROGRESS**
 - (@GermanBluefox) Allowed authentication with token
 
 ### 1.0.4 (2025-03-23)

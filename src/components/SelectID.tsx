@@ -105,7 +105,7 @@ function singletonConnection(props: ConnectionProps, onConnectionChanged: (conne
 export interface ISelectIDWebComponentProps {
     port?: number | string;
     protocol?: 'http:' | 'https:';
-    token?: OAuth2Response;
+    token?: string;
     host?: string;
     selected?: string;
     onclose: OnClose | string;
@@ -125,7 +125,7 @@ interface SelectIDWebComponentState {
     selected: string;
     opened: boolean;
     all: 'true' | 'false';
-    token: OAuth2Response | null;
+    token: string;
 }
 
 export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, SelectIDWebComponentState> {
@@ -153,7 +153,7 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
             opened: !!props.open,
             connected: false,
             all: props.all || 'false',
-            token: props.token || null,
+            token: props.token || '',
         };
         I18n.setLanguage(this.props.language || 'en');
     }
@@ -173,9 +173,9 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
         } else if (attr === 'all' && value !== this.state.all) {
             this.setState({ all: value as 'true' | 'false' });
         } else if (attr === 'token' && value !== JSON.stringify(this.state.token)) {
-            const token = value ? JSON.parse(value as string) as OAuth2Response : null;
+            const token = value ? (JSON.parse(value as string) as OAuth2Response) : null;
             const oldToken = this.state.token;
-            this.setState({ token: value ? JSON.parse(value as string) as OAuth2Response : null }, () => {
+            this.setState({ token: (value as string) || '' }, () => {
                 if (token) {
                     Connection.saveTokensStatic(token, false);
                 } else if (oldToken) {
@@ -188,7 +188,8 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
     componentDidMount(): void {
         (window as any)._iobOnPropertyChanged = this.iobOnPropertyChanged;
         if (this.props.token) {
-            Connection.saveTokensStatic(this.props.token, false);
+            const token: OAuth2Response = JSON.parse(this.props.token);
+            Connection.saveTokensStatic(token, false);
         }
 
         this.setState({
