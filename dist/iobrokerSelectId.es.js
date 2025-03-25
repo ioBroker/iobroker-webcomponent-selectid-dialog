@@ -54115,7 +54115,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         opened: !!e.open,
         connected: !1,
         all: e.all || "false",
-        token: e.token || null
+        token: e.token || ""
       }, L.setLanguage(this.props.language || "en");
     }
     iobOnPropertyChanged = (e, r) => {
@@ -54128,13 +54128,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         this.setState({ all: r });
       else if (e === "token" && r !== JSON.stringify(this.state.token)) {
         const n = r ? JSON.parse(r) : null, o = this.state.token;
-        this.setState({ token: r ? JSON.parse(r) : null }, () => {
+        this.setState({ token: r || "" }, () => {
           n ? wr.saveTokensStatic(n, !1) : o && wr.deleteTokensStatic();
         });
       }
     };
     componentDidMount() {
-      window._iobOnPropertyChanged = this.iobOnPropertyChanged, this.props.token && wr.saveTokensStatic(this.props.token, !1), this.setState({
+      if (window._iobOnPropertyChanged = this.iobOnPropertyChanged, this.props.token) {
+        const e = JSON.parse(this.props.token);
+        wr.saveTokensStatic(e, !1);
+      }
+      this.setState({
         socket: oWe(
           {
             port: this.props.port,
