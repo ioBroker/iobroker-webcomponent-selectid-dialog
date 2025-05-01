@@ -38,11 +38,11 @@
     "@iobroker/types": "^7.0.7",
     "@iobroker/ws": "^2.1.0",
     "@mui/material": "^6.4.8",
-    "@types/react": "^18.3.19",
+    "@types/react": "^19.1.2",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "globals": "^16.0.0",
-    "react": "^18.3.1",
+    "react": "^19.1.0",
     "react-dom": "^18.3.1",
     "typescript": "^5.8.2",
     "vite": "^6.3.4"
