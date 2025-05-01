@@ -35,7 +35,7 @@
     "@eslint/js": "^9.23.0",
     "@iobroker/adapter-react-v5": "^7.6.3",
     "@iobroker/eslint-config": "^2.0.1",
-    "@iobroker/types": "^7.0.6",
+    "@iobroker/types": "^7.0.7",
     "@iobroker/ws": "^2.1.0",
     "@mui/material": "^6.4.8",
     "@types/react": "^18.3.19",
