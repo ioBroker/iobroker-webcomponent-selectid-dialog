@@ -6,7 +6,7 @@ export const normalizeAttribute = (attribute: string): string => {
     return attribute.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
 };
 
-class SubscriptionWebComponent extends HTMLElement {
+export default class SubscriptionWebComponent extends HTMLElement {
     private componentRoot: ReactDOM.Root | null = null;
     // is called when the element is created
     constructor() {
@@ -51,5 +51,3 @@ class SubscriptionWebComponent extends HTMLElement {
         return props as T;
     }
 }
-
-export default SubscriptionWebComponent;

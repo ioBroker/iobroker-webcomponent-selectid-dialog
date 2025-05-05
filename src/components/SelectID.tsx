@@ -176,8 +176,12 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
             this.setState({ token: (value as string) || '', connected: false }, () => {
                 let access_token: string = '';
                 if (this.state.token) {
-                    const token: OAuth2Response = JSON.parse(this.state.token);
-                    access_token = token.access_token;
+                    try {
+                        const token: OAuth2Response = JSON.parse(this.state.token);
+                        access_token = token?.access_token || '';
+                    } catch {
+                        // ignore
+                    }
                 }
                 this.setState({
                     socket: singletonConnection(
@@ -197,10 +201,14 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
 
     componentDidMount(): void {
         (window as any)._iobOnPropertyChanged = this.iobOnPropertyChanged;
-        let access_token: string = '';
+        let accessToken: string = '';
         if (this.state.token) {
-            const token: OAuth2Response = JSON.parse(this.state.token);
-            access_token = token.access_token;
+            try {
+                const token: OAuth2Response = JSON.parse(this.state.token);
+                accessToken = token?.access_token || '';
+            } catch {
+                // ignore
+            }
         }
 
         this.setState({
@@ -210,7 +218,7 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
                     host: this.props.host,
                     protocol: this.props.protocol,
                     // @ts-expect-error
-                    token: access_token,
+                    token: accessToken,
                 },
                 (connected: boolean): void => this.setState({ connected }),
             ),

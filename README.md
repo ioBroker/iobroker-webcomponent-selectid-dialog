@@ -103,6 +103,9 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (@GermanBluefox) Corrected error if the token was not provided
+
 ### 1.0.7 (2025-03-25)
 - (@GermanBluefox) Allowed authentication with token
 

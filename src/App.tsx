@@ -1,7 +1,7 @@
 import React from 'react';
 import { SelectIDWebComponent } from './components/SelectID';
 
-function App(): React.JSX.Element {
+export default function App(): React.JSX.Element {
     return (
         <SelectIDWebComponent
             language="de"
@@ -21,5 +21,3 @@ function App(): React.JSX.Element {
         />
     );
 }
-
-export default App;
