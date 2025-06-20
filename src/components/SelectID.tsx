@@ -116,6 +116,7 @@ export interface ISelectIDWebComponentProps {
     primary?: string;
     secondary?: string;
     paper?: string;
+    zIndex?: string;
 }
 
 interface SelectIDWebComponentState {
@@ -249,6 +250,8 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
             <StyledEngineProvider injectFirst>
                 <ThemeProvider theme={this.state.theme}>
                     <SelectID
+                        // @ts-expect-error fixed in adapter-react-v5 7.7.1
+                        zIndex={this.props.zIndex ? parseInt(this.props.zIndex, 10) : undefined}
                         themeName="light"
                         themeType="light"
                         allowNonObjects={this.state.all === 'true'}

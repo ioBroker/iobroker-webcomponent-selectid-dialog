@@ -103,6 +103,9 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (@GermanBluefox) Allowed setting zIndex for the dialog
+
 ### 1.0.8 (2025-05-05)
 - (@GermanBluefox) Corrected error if the token was not provided
 
