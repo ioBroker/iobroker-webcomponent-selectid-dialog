@@ -103,7 +103,7 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
-### 1.0.9 (2025-06-21)
+### **WORK IN PROGRESS**
 - (@GermanBluefox) Allowed setting zIndex for the dialog
 
 ### 1.0.8 (2025-05-05)

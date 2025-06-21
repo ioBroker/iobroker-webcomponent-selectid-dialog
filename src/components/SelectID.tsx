@@ -116,7 +116,7 @@ export interface ISelectIDWebComponentProps {
     primary?: string;
     secondary?: string;
     paper?: string;
-    zIndex?: string;
+    zindex?: string;
 }
 
 interface SelectIDWebComponentState {
@@ -156,7 +156,7 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
             all: props.all || 'false',
             token: props.token || '',
         };
-        I18n.setLanguage(this.props.language || 'en');
+        I18n.setLanguage(props.language || 'en');
     }
 
     iobOnPropertyChanged = (attr: string, value: string | boolean): void => {
@@ -190,7 +190,7 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
                             port: this.props.port,
                             host: this.props.host,
                             protocol: this.props.protocol,
-                            // @ts-expect-error
+                            // @ts-expect-error will be fixed later
                             token: access_token,
                         },
                         (connected: boolean): void => this.setState({ connected }),
@@ -236,7 +236,7 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
         (window as any)._renderText = `[${new Date().toString()}] render`;
 
         console.log(
-            `Render socket: ${!!this.state.socket}, theme: ${!!this.state.theme}, connected: ${this.state.connected}, opened: ${this.state.opened}, selected: ${this.state.selected}`,
+            `Render socket: ${!!this.state.socket}, theme: ${!!this.state.theme}, connected: ${this.state.connected}, opened: ${this.state.opened}, selected: ${this.state.selected}, zindex: ${this.props.zindex}`,
         );
 
         if (!this.state.socket || !this.state.theme) {
@@ -250,7 +250,7 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
             <StyledEngineProvider injectFirst>
                 <ThemeProvider theme={this.state.theme}>
                     <SelectID
-                        zIndex={this.props.zIndex ? parseInt(this.props.zIndex, 10) : undefined}
+                        zIndex={this.props.zindex ? parseInt(this.props.zindex, 10) : undefined}
                         themeName={this.state.theme.palette.mode}
                         themeType={this.state.theme.palette.mode}
                         allowNonObjects={this.state.all === 'true'}

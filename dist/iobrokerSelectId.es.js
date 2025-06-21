@@ -58318,7 +58318,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               port: this.props.port,
               host: this.props.host,
               protocol: this.props.protocol,
-              // @ts-expect-error
+              // @ts-expect-error will be fixed later
               token: n
             },
             (o) => this.setState({ connected: o })
@@ -58352,11 +58352,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }
     render() {
       return window._renderText = `[${(/* @__PURE__ */ new Date()).toString()}] render`, console.log(
-        `Render socket: ${!!this.state.socket}, theme: ${!!this.state.theme}, connected: ${this.state.connected}, opened: ${this.state.opened}, selected: ${this.state.selected}`
+        `Render socket: ${!!this.state.socket}, theme: ${!!this.state.theme}, connected: ${this.state.connected}, opened: ${this.state.opened}, selected: ${this.state.selected}, zindex: ${this.props.zindex}`
       ), !this.state.socket || !this.state.theme ? /* @__PURE__ */ z.jsx("div", { children: "..." }) : this.state.connected ? this.state.opened ? /* @__PURE__ */ z.jsx(QO, { injectFirst: !0, children: /* @__PURE__ */ z.jsx(qD, { theme: this.state.theme, children: /* @__PURE__ */ z.jsx(
         PJ,
         {
-          zIndex: this.props.zIndex ? parseInt(this.props.zIndex, 10) : void 0,
+          zIndex: this.props.zindex ? parseInt(this.props.zindex, 10) : void 0,
           themeName: this.state.theme.palette.mode,
           themeType: this.state.theme.palette.mode,
           allowNonObjects: this.state.all === "true",
