@@ -251,8 +251,8 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
                 <ThemeProvider theme={this.state.theme}>
                     <SelectID
                         zIndex={this.props.zIndex ? parseInt(this.props.zIndex, 10) : undefined}
-                        themeName="light"
-                        themeType="light"
+                        themeName={this.state.theme.palette.mode}
+                        themeType={this.state.theme.palette.mode}
                         allowNonObjects={this.state.all === 'true'}
                         imagePrefix={`${this.props.protocol || window.location.protocol}//${this.props.host || window.location.hostname}:${this.props.port || 8081}`}
                         theme={this.state.theme}
