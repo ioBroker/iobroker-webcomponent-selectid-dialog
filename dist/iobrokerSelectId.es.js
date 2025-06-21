@@ -58299,7 +58299,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         connected: !1,
         all: e.all || "false",
         token: e.token || ""
-      }, L.setLanguage(this.props.language || "en");
+      }, L.setLanguage(e.language || "en");
     }
     iobOnPropertyChanged = (e, r) => {
       if (console.log(`New value ${e}, ${r}`), e === "open") {
