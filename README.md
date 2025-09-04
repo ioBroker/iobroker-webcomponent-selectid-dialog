@@ -103,6 +103,9 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (@GermanBluefox) Destroy dialog after close if created dynamically
+
 ### 1.0.10 (2025-06-21)
 - (@GermanBluefox) Allowed setting zIndex for the dialog
 

@@ -34,9 +34,9 @@ export default class SubscriptionWebComponent extends HTMLElement {
         this.componentRoot.render(<SelectIDWebComponent {...props} />);
     }
 
-    // eslint-disable-next-line class-methods-use-this
     disconnectedCallback(): void {
-        console.log(`disconnectedCallback`);
+        this.componentRoot?.unmount();
+        this.componentRoot = null;
     }
 
     // converts "should-display-mentions" to "shouldDisplayMentions"

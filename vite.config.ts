@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+// @ts-expect-error no types
 import react from '@vitejs/plugin-react';
 
 // https://techblog.skeepers.io/create-a-web-component-from-a-react-component-bbe7c5f85ee6
