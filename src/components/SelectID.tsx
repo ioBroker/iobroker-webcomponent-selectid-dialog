@@ -175,7 +175,7 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
             this.setState({ all: value as 'true' | 'false' });
         } else if (attr === 'token' && value !== JSON.stringify(this.state.token)) {
             this.setState({ token: (value as string) || '', connected: false }, () => {
-                let access_token: string = '';
+                let access_token = '';
                 if (this.state.token) {
                     try {
                         const token: OAuth2Response = JSON.parse(this.state.token);
@@ -202,7 +202,7 @@ export class SelectIDWebComponent extends Component<ISelectIDWebComponentProps, 
 
     componentDidMount(): void {
         (window as any)._iobOnPropertyChanged = this.iobOnPropertyChanged;
-        let accessToken: string = '';
+        let accessToken = '';
         if (this.state.token) {
             try {
                 const token: OAuth2Response = JSON.parse(this.state.token);
