@@ -103,7 +103,7 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
-### 1.0.11 (2025-09-04)
+### **WORK IN PROGRESS**
 - (@GermanBluefox) Destroy dialog after close if created dynamically
 
 ### 1.0.10 (2025-06-21)
