@@ -10,7 +10,7 @@ export async function openSelectIdDialog(config) {
     return new Promise(async resolve => {
         storedResolve = resolve;
         if (!codeLoaded) {
-            await import('./iobrokerFile.es.js');
+            await import('./iobrokerSelectId.es.js');
             codeLoaded = true;
         }
         let selectDialog = document.getElementById('iobroker-select-id');
