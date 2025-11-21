@@ -103,7 +103,7 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.0.13 (2025-11-21)
 - (@jogibear9988) Corrected call of the dialog
 
 ### 1.0.12 (2025-09-04)
