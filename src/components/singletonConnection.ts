@@ -65,11 +65,10 @@ export default function singletonConnection(
 
     connection = new Connection({
         ...props,
-        protocol: props.protocol || window.location.protocol,
+        protocol: props.protocol || window.location.protocol as 'http:' | 'https:',
         host: props.host || window.location.hostname,
         port: props.port || 8081,
         name: 'select-web-component',
-        // @ts-expect-error
         token: props.token,
         onProgress: (progress: PROGRESS) => {
             if (progress === PROGRESS.CONNECTING) {

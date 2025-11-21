@@ -103,6 +103,9 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (@jogibear9988) Corrected call of the dialog
+
 ### 1.0.12 (2025-09-04)
 - (@GermanBluefox) Destroy dialog after close if created dynamically
 
