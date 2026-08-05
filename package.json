@@ -1,56 +1,56 @@
 {
-    "name": "@iobroker/webcomponent-selectid-dialog",
-    "publishConfig": {
-        "access": "public"
-    },
-    "version": "1.0.13",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "tsc": "tsc -b --verbose",
-        "build": "node tasks.ts && tsc -b && vite build",
-        "lint": "eslint -c eslint.config.mjs",
-        "update-packages": "npx -y npm-check-updates --upgrade",
-        "release": "release-script",
-        "release-patch": "release-script patch --yes",
-        "release-minor": "release-script minor --yes",
-        "release-major": "release-script major --yes"
-    },
-    "files": [
-        "LICENSE",
-        "build"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ioBroker/iobroker-webcomponent-selectid-dialog"
-    },
-    "main": "./build/iobrokerSelectId.es.js",
-    "module": "./build/iobrokerSelectId.es.js",
-    "exports": {
-        ".": "./build/iobrokerSelectId.es.js",
-        "./selectIdHelper.js": "./build/selectIdHelper.js",
-        "./package.json": "./package.json"
-    },
-    "devDependencies": {
-        "@alcalzone/release-script": "^5.2.1",
-        "@alcalzone/release-script-plugin-license": "^5.2.2",
-        "@emotion/react": "^11.14.0",
-        "@emotion/styled": "^11.14.1",
-        "@eslint/js": "^9.39.5",
-        "@iobroker/gui-components": "^10.0.12",
-        "@iobroker/eslint-config": "^2.3.4",
-        "@iobroker/socket-client": "^5.2.1",
-        "@iobroker/types": "^7.2.2",
-        "@iobroker/ws": "^3.1.0",
-        "@mui/material": "^9.3.0",
-        "@types/node": "^20.19.43",
-        "@types/react": "^19.2.18",
-        "@types/react-dom": "^19.2.4",
-        "@vitejs/plugin-react": "^6.0.5",
-        "globals": "^17.9.0",
-        "react": "^19.2.8",
-        "react-dom": "^19.2.8",
-        "typescript": "~6.0.3",
-        "vite": "^8.2.0"
-    }
+  "name": "@iobroker/webcomponent-selectid-dialog",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "tsc": "tsc -b --verbose",
+    "build": "node tasks.ts && tsc -b && vite build",
+    "lint": "eslint -c eslint.config.mjs",
+    "update-packages": "npx -y npm-check-updates --upgrade",
+    "release": "release-script",
+    "release-patch": "release-script patch --yes",
+    "release-minor": "release-script minor --yes",
+    "release-major": "release-script major --yes"
+  },
+  "files": [
+    "LICENSE",
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ioBroker/iobroker-webcomponent-selectid-dialog"
+  },
+  "main": "./build/iobrokerSelectId.es.js",
+  "module": "./build/iobrokerSelectId.es.js",
+  "exports": {
+    ".": "./build/iobrokerSelectId.es.js",
+    "./selectIdHelper.js": "./build/selectIdHelper.js",
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "@alcalzone/release-script": "^5.2.1",
+    "@alcalzone/release-script-plugin-license": "^5.2.2",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@eslint/js": "^9.39.5",
+    "@iobroker/gui-components": "^10.0.12",
+    "@iobroker/eslint-config": "^2.3.4",
+    "@iobroker/socket-client": "^5.2.1",
+    "@iobroker/types": "^7.2.2",
+    "@iobroker/ws": "^3.1.0",
+    "@mui/material": "^9.3.0",
+    "@types/node": "^20.19.43",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "globals": "^17.9.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "typescript": "~6.0.3",
+    "vite": "^8.2.0"
+  }
 }
