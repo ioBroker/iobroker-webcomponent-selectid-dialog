@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 
-import {
-    SelectID,
-    type Connection,
-    Theme,
-    type IobTheme,
-    I18n,
-} from '@iobroker/adapter-react-v5';
+import { SelectID, type Connection, Theme, type IobTheme, I18n } from '@iobroker/gui-components';
 
 import type { OAuth2Response } from '@iobroker/socket-client';
 import singletonConnection from './singletonConnection';

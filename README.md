@@ -5,7 +5,7 @@ It can work with admin or web instances only without authentication currently.
 
 Please note that mixed connections from an HTTP page to a WSS server and vice versa (from HTTPS to WS) do not work in most browsers.
 
-Before creating the dialog, the socket file must be loaded. You can find the code [here](https://github.com/ioBroker/ioBroker.ws.client/tree/main/dist/esm).
+Before creating the dialog, the socket file must be loaded. You can find the code [here](https://github.com/ioBroker/ioBroker.ws.client/tree/main/build/esm).
 
 However, it is always better to load the client part from the ioBroker server.
 ```html
@@ -84,7 +84,7 @@ Or static:
 There is also a wrapper included in the file `selectIdHelper.js`, wich lazy loads the ESM module
 and provides a promise to open the UI:
 ```js
-  import openSelectIdDialog from '@iobroker/webcomponent-selectid-dialog/dist/selectIdHelper.js'
+  import openSelectIdDialog from '@iobroker/webcomponent-selectid-dialog/selectIdHelper.js'
   const id = await openSelectIdDialog({
       port: 8089,
       host: '1.2.3.4',
@@ -103,6 +103,9 @@ and provides a promise to open the UI:
 <!--
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (@GermanBluefox) Updated to React 19 and MUI 9
+
 ### 1.0.13 (2025-11-21)
 - (@jogibear9988) Corrected call of the dialog
 
@@ -130,7 +133,7 @@ and provides a promise to open the UI:
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2025 Denis Haev <dogafox@gmail.com>
+Copyright (c) 2025-2026 Denis Haev <dogafox@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
