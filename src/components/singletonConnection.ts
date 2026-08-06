@@ -1,16 +1,16 @@
-import { Connection, PROGRESS, type ConnectionProps, I18n } from '@iobroker/adapter-react-v5';
+import { Connection, PROGRESS, type ConnectionProps, I18n } from '@iobroker/gui-components';
 
-import langEn from '@iobroker/adapter-react-v5/i18n/en.json';
-import langDe from '@iobroker/adapter-react-v5/i18n/de.json';
-import langRu from '@iobroker/adapter-react-v5/i18n/ru.json';
-import langPt from '@iobroker/adapter-react-v5/i18n/pt.json';
-import langNl from '@iobroker/adapter-react-v5/i18n/nl.json';
-import langFr from '@iobroker/adapter-react-v5/i18n/fr.json';
-import langIt from '@iobroker/adapter-react-v5/i18n/it.json';
-import langEs from '@iobroker/adapter-react-v5/i18n/es.json';
-import langPl from '@iobroker/adapter-react-v5/i18n/pl.json';
-import langUk from '@iobroker/adapter-react-v5/i18n/uk.json';
-import langZhCn from '@iobroker/adapter-react-v5/i18n/zh-cn.json';
+import langEn from '@iobroker/gui-components/i18n/en.json';
+import langDe from '@iobroker/gui-components/i18n/de.json';
+import langRu from '@iobroker/gui-components/i18n/ru.json';
+import langPt from '@iobroker/gui-components/i18n/pt.json';
+import langNl from '@iobroker/gui-components/i18n/nl.json';
+import langFr from '@iobroker/gui-components/i18n/fr.json';
+import langIt from '@iobroker/gui-components/i18n/it.json';
+import langEs from '@iobroker/gui-components/i18n/es.json';
+import langPl from '@iobroker/gui-components/i18n/pl.json';
+import langUk from '@iobroker/gui-components/i18n/uk.json';
+import langZhCn from '@iobroker/gui-components/i18n/zh-cn.json';
 
 if (window.socketUrl) {
     if (window.socketUrl.startsWith(':')) {
@@ -65,7 +65,7 @@ export default function singletonConnection(
 
     connection = new Connection({
         ...props,
-        protocol: props.protocol || window.location.protocol as 'http:' | 'https:',
+        protocol: props.protocol || (window.location.protocol as 'http:' | 'https:'),
         host: props.host || window.location.hostname,
         port: props.port || 8081,
         name: 'select-web-component',

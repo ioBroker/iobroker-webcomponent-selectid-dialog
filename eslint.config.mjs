@@ -4,13 +4,13 @@ export default [
     ...config,
     ...reactConfig,
     {
-        ignores: ['node_modules/**', 'dist/**', 'public/**'],
+        ignores: ['node_modules/**', 'build/**', 'public/**'],
     },
     {
         languageOptions: {
             parserOptions: {
                 projectService: {
-                    allowDefaultProject: ['*.js', '*.mjs'],
+                    allowDefaultProject: ['*.js', '*.mjs', 'tasks.ts', 'vite.config.ts'],
                 },
                 tsconfigRootDir: import.meta.dirname,
             },

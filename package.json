@@ -3,12 +3,14 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.0.13",
+  "version": "2.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test:package": "echo \"No tests for that\"",
+    "test:integration": "echo \"No tests for that\"",
     "tsc": "tsc -b --verbose",
-    "build": "node tasks && tsc -b && vite build",
+    "build": "node tasks.ts && tsc -b && vite build",
     "lint": "eslint -c eslint.config.mjs",
     "update-packages": "npx -y npm-check-updates --upgrade",
     "release": "release-script",
@@ -18,33 +20,39 @@
   },
   "files": [
     "LICENSE",
-    "dist"
+    "build"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ioBroker/iobroker-webcomponent-selectid-dialog"
+    "url": "git+https://github.com/ioBroker/iobroker-webcomponent-selectid-dialog.git"
   },
-  "main": "./dist/iobrokerSelectId.es.js",
-  "module": "./dist/iobrokerSelectId.es.js",
+  "main": "./build/iobrokerSelectId.es.js",
+  "module": "./build/iobrokerSelectId.es.js",
   "exports": {
-    ".": "./dist/iobrokerSelectId.es.js"
+    ".": "./build/iobrokerSelectId.es.js",
+    "./selectIdHelper.js": "./build/selectIdHelper.js",
+    "./package.json": "./package.json"
   },
   "devDependencies": {
-    "@alcalzone/release-script": "^5.0.0",
-    "@alcalzone/release-script-plugin-license": "^4.0.0",
-    "@eslint/js": "^9.39.2",
-    "@iobroker/adapter-react-v5": "^8.0.16",
-    "@iobroker/eslint-config": "^2.2.0",
-    "@iobroker/types": "^7.0.7",
-    "@iobroker/ws": "^3.0.4",
-    "@mui/material": "^6.5.0",
-    "@types/react": "^18.3.27",
-    "@types/react-dom": "^18.3.7",
-    "@vitejs/plugin-react": "^5.1.1",
-    "globals": "^16.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "typescript": "~5.9.3",
-    "vite": "^7.3.0"
+    "@alcalzone/release-script": "^5.2.1",
+    "@alcalzone/release-script-plugin-license": "^5.2.2",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@eslint/js": "^9.39.5",
+    "@iobroker/gui-components": "^10.0.12",
+    "@iobroker/eslint-config": "^2.3.4",
+    "@iobroker/socket-client": "^5.2.1",
+    "@iobroker/types": "^7.2.2",
+    "@iobroker/ws": "^3.1.0",
+    "@mui/material": "^9.3.0",
+    "@types/node": "^20.19.43",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "globals": "^17.9.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "typescript": "~6.0.3",
+    "vite": "^8.2.0"
   }
 }
