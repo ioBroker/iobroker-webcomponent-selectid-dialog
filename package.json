@@ -47,7 +47,7 @@
     "@mui/material": "^9.3.0",
     "@types/node": "^20.19.43",
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
+    "@types/react-dom": "^19.2.5",
     "@vitejs/plugin-react": "^6.0.5",
     "globals": "^17.9.0",
     "react": "^19.2.8",
