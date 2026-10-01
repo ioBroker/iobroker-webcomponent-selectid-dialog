@@ -39,7 +39,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@eslint/js": "^9.39.5",
-    "@iobroker/gui-components": "^10.0.12",
+    "@iobroker/gui-components": "^10.3.6",
     "@iobroker/eslint-config": "^2.3.4",
     "@iobroker/socket-client": "^5.2.1",
     "@iobroker/types": "^7.2.2",
